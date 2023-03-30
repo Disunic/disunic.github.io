@@ -173,6 +173,7 @@ function onlight(){
     document.getElementById("biclose").style.color = "black"
     document.getElementById("sugen").style.background = "white"
     document.getElementById("sugen").style.color = "black";
+    document.getElementById("btn2").style.color = "black";
     // document.getElementById("").style. = ""
     // document.getElementById("").style. = ""
     // document.getElementById("").style. = ""
@@ -201,6 +202,7 @@ function ondark(){
     document.getElementById("biclose").style.color = "white"
     document.getElementById("sugen").style.background = "#1f2533"
     document.getElementById("sugen").style.color = "white";
+    document.getElementById("btn2").style.color = "white";
     // document.getElementById("").style. = ""
     // document.getElementById("").style.color = ""
     $('input').addClass('inp');
