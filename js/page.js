@@ -22,159 +22,6 @@ function changesearchenginecls2() {
     document.getElementById("main").style.opacity = "100"
     document.getElementById("main2").style.opacity = "100"
 }
-function googlesearchforlogic() {
-    engine = "Google"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Google");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    searchch.src = "./img/external/googlelogo.png";
-    searchch2.src = "./img/external/googlelogo.png";
-    changesearchenginecls()
-    noneInformationdesign();
-    check2();
-}
-function googlesearchforlogic2() {
-    engine = "Google"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Google");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    searchch.src = "./img/external/googlelogo.png";
-    searchch2.src = "./img/external/googlelogo.png";
-    changesearchenginecls2();
-}
-function informationsearchforlogic() {
-    engine = "Information"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Information");
-    let searchch = document.getElementById("searchch");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/disuniclogo.png";
-    changesearchenginecls()
-    Informationdesign()
-}
-function bingsearchforlogic() {
-    engine = "Bing"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Bing");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/binglogo.jpeg";
-    searchch2.src = "./img/external/binglogo.jpeg";
-    changesearchenginecls()
-    noneInformationdesign();
-    check2();
-}
-function bingsearchforlogic2() {
-    engine = "Bing"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Bing");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/binglogo.jpeg";
-    searchch2.src = "./img/external/binglogo.jpeg";
-    changesearchenginecls2()
-}
-function bravesearchforlogic() {
-    engine = "Brave"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Brave");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/brave.png";
-    searchch2.src = "./img/external/brave.png";
-    changesearchenginecls()
-    noneInformationdesign();
-    check2();
-}
-function bravesearchforlogic2() {
-    engine = "Brave"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Brave");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/brave.png";
-    searchch2.src = "./img/external/brave.png";
-    changesearchenginecls2()
-}
-function yahoosearchforlogic() {
-    engine = "Yahoo"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Yahoo");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/yahoologo.jpeg";
-    searchch2.src = "./img/external/yahoologo.jpeg";
-    changesearchenginecls()
-    noneInformationdesign();
-    check2();
-}
-function yahoosearchforlogic2() {
-    engine = "Yahoo"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Yahoo");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/yahoologo.jpeg";
-    searchch2.src = "./img/external/yahoologo.jpeg";
-    changesearchenginecls2()
-}
-function duckduckgosearchforlogic() {
-    engine = "DuckDuckGo"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "DuckDuckGo");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/duckduckgologo.png";
-    searchch2.src = "./img/external/duckduckgologo.png";
-    changesearchenginecls()
-    noneInformationdesign();
-    check2();
-}
-function duckduckgosearchforlogic2() {
-    engine = "DuckDuckGo"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "DuckDuckGo");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/duckduckgologo.png";
-    searchch2.src = "./img/external/duckduckgologo.png";
-    changesearchenginecls2()
-}
-function metagersearchforlogic() {
-    engine = "Metager"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Metager");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/metager.png";
-    searchch2.src = "./img/external/metager.png";
-    changesearchenginecls()
-    noneInformationdesign();
-    check2();
-}
-function metagersearchforlogic2() {
-    engine = "Metager"
-    localStorage.removeItem("engine");
-    localStorage.setItem("engine", "Metager");
-    let searchch = document.getElementById("searchch");
-    let searchch2 = document.getElementById("searchch2");
-    document.getElementById("searchengines").style.display = "none"
-    searchch.src = "./img/external/metager.png";
-    searchch2.src = "./img/external/metager.png";
-    changesearchenginecls2()
-}
-
 function Informationdesign() {
     document.getElementById("logo").style.display = "none";
     document.getElementById("searchcontent").style.display = "none";
@@ -214,6 +61,27 @@ function check() {
     }
     else if (localStorage.getItem("engine") === "Metager") {
         metagersearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Aol") {
+        aolsearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Mojeek") {
+        mojeeksearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Qwant") {
+        qwantsearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Dogpile") {
+        dogpilesearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Ecosia") {
+        ecosiasearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Yandex") {
+        yandexsearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Kiddle") {
+        kiddlesearchforlogic()
     }
     else {
         googlesearchforlogic()
@@ -258,8 +126,6 @@ function check2() {
 
     }
 }
-
-
 function lightmode() {
     localStorage.removeItem("mode")
     localStorage.setItem("mode", "light")
@@ -282,8 +148,8 @@ function onlight() {
     document.getElementById("inp").style.background = "white"
     document.getElementById("inp").style.color = "black"
     document.getElementById("btn").style.color = "black"
-    $('.sed1').css("background","white")
-    $('.se1h2').css("color","black")
+    $('.sed1').css("background", "white")
+    $('.se1h2').css("color", "black")
     document.getElementById("searchengines").style.background = "white"
     document.getElementById("searchengines").style.color = "black"
     document.getElementById("biclose").style.color = "black"
@@ -311,8 +177,8 @@ function ondark() {
     document.getElementById("inp").style.background = "#1f2533"
     document.getElementById("inp").style.color = "white"
     document.getElementById("btn").style.color = "white"
-    $('.sed1').css("background","#1f2533")
-    $('.se1h2').css("color","white")
+    $('.sed1').css("background", "#1f2533")
+    $('.se1h2').css("color", "white")
     document.getElementById("se1h2").style.color = "white"
     document.getElementById("searchengines").style.background = "#1f2533"
     document.getElementById("searchengines").style.color = "white"
@@ -337,12 +203,19 @@ function inpclick() {
     document.getElementById("searchbar").style.borderRadius = "0px";
     document.getElementById("searchbar").style.height = "65px";
     document.getElementById("info").style.display = "none"
-    document.getElementById("google").setAttribute("onclick", "googlesearchforlogic2(),googlesearch()")
-    document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic2(),bingsearch()")
-    document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic2(),bravesearch()")
-    document.getElementById("yahoo").setAttribute("onclick", "yahoosearchforlogic2(),yahoosearch()")
-    document.getElementById("duckduckgo").setAttribute("onclick", "duckduckgosearchforlogic2(),duckduckgosearch()")
-    document.getElementById("metager").setAttribute("onclick", "metagersearchforlogic2(),metagersearch()")
+    document.getElementById("google").setAttribute("onclick", "googlesearchforlogic2()")
+    document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic2()")
+    document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic2()")
+    document.getElementById("yahoo").setAttribute("onclick", "yahoosearchforlogic2()")
+    document.getElementById("duckduckgo").setAttribute("onclick", "duckduckgosearchforlogic2()")
+    document.getElementById("metager").setAttribute("onclick", "metagersearchforlogic2()")
+    document.getElementById("aol").setAttribute("onclick", "aolsearchforlogic2()")
+    document.getElementById("mojeek").setAttribute("onclick", "mojeeksearchforlogic2()")
+    document.getElementById("qwant").setAttribute("onclick", "qwantsearchforlogic2()")
+    document.getElementById("dogpile").setAttribute("onclick", "dogpilesearchforlogic2()")
+    document.getElementById("ecosia").setAttribute("onclick", "ecosiasearchforlogic2()")
+    document.getElementById("yandex").setAttribute("onclick", "yandexsearchforlogic2()")
+    document.getElementById("kiddle").setAttribute("onclick", "kiddlesearchforlogic2()")
 }
 function inpclickback() {
     document.getElementById("main2").style.display = "";
@@ -363,11 +236,17 @@ function inpclickback() {
     removeandcorrect()
 }
 function removeandcorrect() {
-    document.getElementById("google").setAttribute("onclick", "googlesearchforlogic(),googlesearch()")
-    document.getElementById("info").setAttribute("onclick", "informationsearchforlogic()")
-    document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic(),bingsearch()")
-    document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic(),bravesearch()")
-    document.getElementById("yahoo").setAttribute("onclick", "yahoosearchforlogic(),yahoosearch()")
-    document.getElementById("duckduckgo").setAttribute("onclick", "duckduckgosearchforlogic(),duckduckgosearch()")
-    document.getElementById("metager").setAttribute("onclick", "metagersearchforlogic(),metagersearch()")
+    document.getElementById("google").setAttribute("onclick", "googlesearchforlogic()")
+    document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic()")
+    document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic()")
+    document.getElementById("yahoo").setAttribute("onclick", "yahoosearchforlogic()")
+    document.getElementById("duckduckgo").setAttribute("onclick", "duckduckgosearchforlogic()")
+    document.getElementById("metager").setAttribute("onclick", "metagersearchforlogic()")
+    document.getElementById("aol").setAttribute("onclick", "aolsearchforlogic()")
+    document.getElementById("mojeek").setAttribute("onclick", "mojeeksearchforlogic()")
+    document.getElementById("qwant").setAttribute("onclick", "qwantsearchforlogic()")
+    document.getElementById("dogpile").setAttribute("onclick", "dogpilesearchforlogic()")
+    document.getElementById("ecosia").setAttribute("onclick", "ecosiasearchforlogic()")
+    document.getElementById("yandex").setAttribute("onclick", "yandexsearchforlogic()")
+    document.getElementById("kiddle").setAttribute("onclick", "kiddlesearchforlogic()")
 }

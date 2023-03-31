@@ -207,6 +207,7 @@ section {
     width: 45px;
     border: 2px solid gray;
     margin-right: 14px;
+    background: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 3px;
     transition: 1s;

@@ -1,21 +1,3 @@
-function googlesearch() {
-    document.getElementById("inp").setAttribute('name', 'disunic')
-}
-function bingsearch() {
-    document.getElementById("inp").setAttribute('name', 'disunic')
-}
-function bravesearch() {
-    document.getElementById("inp").setAttribute('name', 'disunic')
-}
-function yahoosearch() {
-    document.getElementById("inp").setAttribute('name', 'disunic')
-}
-function duckduckgosearch() {
-    document.getElementById("inp").setAttribute('name', 'disunic')
-}
-function metagersearch() {
-    document.getElementById("inp").setAttribute('name', 'disunic')
-}
 function search() {
     let input = document.getElementById("inp").value
     if (engine === "Google") {
@@ -36,7 +18,27 @@ function search() {
     else if (engine === "Metager") {
         window.open("https://metager.org/meta/meta.ger3?eingabe=" + input, "_self")
     }
+    else if (engine === "Aol") {
+        window.open("https://search.aol.com/aol/search?q=" + input, "_self")
+    }
+    else if (engine === "Mojeek") {
+        window.open("https://www.mojeek.com/search?q=" + input, "_self")
+    }
+    else if (engine === "Qwant") {
+        window.open("https://www.qwant.com/?l=en&q=" + input, "_self")
+    }
+    else if (engine === "Dogpile") {
+        window.open("https://www.dogpile.com/serp?q=" + input, "_self")
+    }
+    else if (engine === "Ecosia") {
+        window.open("https://www.ecosia.org/search?method=index&q=" + input, "_self")
+    }
+    else if (engine === "Yandex") {
+        window.open("https://yandex.com/search/touch/?text=" + input, "_self")
+    }
+    else if (engine === "Kiddle") {
+        window.open("https://www.kiddle.co/s.php?q=" + input, "_self")
+    }
     else {
-
     }
 }
