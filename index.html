@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
-<body onload="check()" id="body">
+<body onload="check(),check2()" id="body">
     <div class="main" id="main">
         <header>
             <div class="nav" id="nav">
@@ -54,9 +54,13 @@
         </div>
         <div class="searchcontent" id="searchcontent">
             <div class="searchbar" id="searchbar">
-                <input autocomplete="off" type="text" placeholder="Search Everything Here ..." id="inp" name="" onclick="inpclick()">
+                <button style="margin-right: 5px;"><img id="searchch2" style="display: none;" src="" alt=""
+                        onclick="changesearchengine()"></button>
+                <input autocomplete="off" type="text" placeholder="Search Everything Here ..." id="inp" name=""
+                    onclick="inpclick()">
                 <button id="btn" onclick="search()"><i style="font-size: 20px;" class="bi bi-search"></i></button>
-                <button id="btn2" style="display: none;" onclick="inpclickback()"><i class="bi bi-x-lg" style="font-size: 20px;margin-left: 10px;"></i></button>
+                <button id="btn2" style="display: none;" onclick="inpclickback()"><i class="bi bi-x-lg"
+                        style="font-size: 20px;margin-left: 10px;"></i></button>
             </div>
             <div class="srch-suggest" id="sugen"></div>
         </div>
@@ -64,7 +68,7 @@
             <div id="chatlog"></div>
             <div class="chatbar">
                 <div class="jfl">
-                    <input type="search" autocomplete="off" id="chatinput" placeholder="Information AI Beta" >
+                    <input type="search" autocomplete="off" id="chatinput" placeholder="Information AI Beta">
                     <button id="chatbutton" onclick="button()"><i style="font-size: 28px;color:#0066ff;"
                             class="bi bi-lightning-charge"></i></button>
                 </div>
@@ -102,11 +106,11 @@
             <img src="./img/external/binglogo.jpeg" alt="">
             Bing
         </div>
-        <div class="cc" id="bing" onclick="informationsearchforlogic()">
+        <div class="cc" id="info" onclick="informationsearchforlogic()">
             <img src="./img/external/disuniclogo.png" alt="">
             Information AI
         </div>
-        <div class="cc" id="bing" onclick="bravesearchforlogic(),bravesearch()">
+        <div class="cc" id="brave" onclick="bravesearchforlogic(),bravesearch()">
             <img src="./img/external/brave.png" alt="">
             Brave
         </div>
@@ -132,19 +136,16 @@
     var srchSugg = document.querySelector(".srch-suggest");
     var srchInput = document.getElementById("inp");
     var articlesCon = document.getElementById("result");
-    // var resultnumber = document.getElementById("rnum").value
 
     srchInput.addEventListener("keyup", function (e) {
         if (e.keyCode === 13) {
-            // wikiSearch(wikiApiUrl2 + srchInput.value.split(" ").join("+"));
             search()
         } else if (srchInput.value) {
             suggSearch(suggURL + srchInput.value.split(" ").join("+"));
         } else {
         }
     });
-    var suggURL = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=suggCallback&list=prefixsearch&pslimit=10&pssearch=";
-    // var wikiApiUrl2 = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=wikiCallback&prop=info%7Cextracts&generator=search&gsrlimit=" + resultnumber + "&inprop=url&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrsearch=";
+    var suggURL = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=suggCallback&list=prefixsearch&pslimit=100&pssearch=";
 
     function wikiSearch(url) {
         var script = document.createElement("script");
@@ -161,9 +162,6 @@
     function suggCallback(data) {
         srchSugg.innerHTML = '';
         srchSugg.style.display = "block";
-        // $('.searchbar').css('border-bottom', 'none');
-        // $('.searchbar').css('box-shadow', '0px 2px 0px 0px gray');
-        // box-shadow: 0px 0px 2px 0px gray;
         $('.searchcontent').css('box-shadow', '0px 0px 2px 0px gray');
         $('.searchcontent').css('border-radius', '10px');
         var titles = data.query.prefixsearch;
@@ -178,7 +176,6 @@
             suggestion.textContent = title.title;
             suggestion.addEventListener("click", function () {
                 srchInput.value = this.textContent;
-                // wikiSearch(wikiApiUrl2 + srchInput.value.split(" ").join("+"));
                 search()
             });
             srchSugg.appendChild(suggestion);
@@ -194,7 +191,6 @@
             var articleURL = pages[page].fullurl;
             var articleTitle = pages[page].title;
             var articleExtract = pages[page].extract;
-            // var articleImg = pages[page].img;
 
             var article = '<div class="article"><a href="' + articleURL + '" target="">';
             article += '<h2 class="rah">' + articleTitle + '</h2>';

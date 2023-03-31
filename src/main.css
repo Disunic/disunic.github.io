@@ -5,7 +5,7 @@ body {
 
 }
 
-section{
+section {
     display: grid;
     transition: background 0.4s;
     background: #ffffff;
@@ -51,7 +51,7 @@ section{
     margin: auto;
     justify-content: center;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 90px;
     font-size: 50px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
@@ -69,7 +69,7 @@ section{
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.238);
     box-shadow: 0px 0px 1px 1px #0468ff, 0px 0px 10px 2px #ff00d4;
-    border-image: linear-gradient(315deg, #00ddff 0%,#ff00d4 74%) 80;
+    border-image: linear-gradient(315deg, #00ddff 0%, #ff00d4 74%) 80;
 }
 
 .nav img {
@@ -92,6 +92,31 @@ section{
     margin-top: 0px;
     border-bottom-right-radius: 10px;
     z-index: 1;
+    /* animation: ani1 1s ; */
+}
+
+@keyframes ani1 {
+    0% {
+        margin-top: 150px;
+        width: 50%;
+    }
+
+    100% {
+        margin-top: 0px;
+        width: 100%;
+    }
+}
+
+@keyframes ani2 {
+    0% {
+        margin-top: 150px;
+        width: 50%;
+    }
+
+    100% {
+        margin-top: 0px;
+        width: 85%;
+    }
 }
 
 .searchbar {
@@ -102,8 +127,8 @@ section{
     box-sizing: border-box;
     box-shadow: 0px 0px 2px 0px gray;
     border-bottom: 3px solid;
-    border-image: linear-gradient(315deg, #00ddff 0%,#ff00d4 74%) 80;
-    padding: 0px 10px 0px 10px;
+    border-image: linear-gradient(315deg, #00ddff 0%, #ff00d4 74%) 80;
+    padding: 0px 10px 0px 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -115,14 +140,23 @@ section{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
 }
-.inp::placeholder{
+
+.inp::placeholder {
     color: white;
 }
+
 .searchbar button {
     outline: 0;
     border: 0px;
     background: none;
     cursor: pointer;
+}
+
+.searchbar button img {
+    width: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px grey;
+    margin: auto;
 }
 
 .searchengines {
@@ -142,11 +176,12 @@ section{
     display: none;
 }
 
-.aaaa{
+.aaaa {
     display: flex;
     align-items: baseline;
 }
-.aaaa h2{
+
+.aaaa h2 {
     width: 100%;
 }
 
@@ -155,12 +190,13 @@ section{
     margin-bottom: 5px;
     display: flex;
     align-items: center;
-    border-bottom: 3px solid ;
-    border-image: linear-gradient(315deg, #00ddff 0%,#ff00d4 74%) 80;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(315deg, #00ddff 0%, #ff00d4 74%) 80;
     padding-bottom: 10px;
     cursor: pointer;
 }
-.aaaa button{
+
+.aaaa button {
     font-size: 25px;
     border: none;
     background: transparent;
@@ -192,19 +228,22 @@ section{
 #sugen {
     display: block;
     margin: auto;
-    padding: 0px 6px;
+    padding: 0px 20px;
+    height: 400px;
+    overflow-y: scroll;
+
 }
 
 #sugen h3 {
     margin-top: 0px;
     margin-bottom: 0px;
     border-bottom: 2px solid;
-    border-image: linear-gradient(50deg, #00ddff 0%,#ff00d4 74%) 80;
+    border-image: linear-gradient(50deg, #aeff00 0%, #006aff 74%) 80;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     cursor: pointer;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -329,11 +368,13 @@ section{
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 
 }
-.content1{
+
+.content1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 30px;
 }
-.content1 h3{
+
+.content1 h3 {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
@@ -349,20 +390,20 @@ section{
 
 .se1 {
     margin-left: 13px;
-  }
-  
-  .se1 h2 {
+}
+
+.se1 h2 {
     color: rgb(0, 0, 0);
     font-size: 28px;
-  }
-  
-  .se1 p {
+}
+
+.se1 p {
     color: #00aaff;
     font-size: 18px;
     font-weight: 700;
-  }
-  
-  .se1 a {
+}
+
+.se1 a {
     padding: 13px 25px;
     color: white;
     border: none;
@@ -378,9 +419,9 @@ section{
     display: block;
     width: fit-content;
     text-decoration: none;
-  }
-  
-  .se1 .avail {
+}
+
+.se1 .avail {
     font-size: 18px;
     padding: 15px 10px;
     width: -moz-fit-content;
@@ -390,13 +431,13 @@ section{
     background: linear-gradient(196deg, #ff6225, #ff09ff);
     border-radius: 6px;
     margin-top: 20px;
-  }
-  
-  .se2 {
+}
+
+.se2 {
     text-align: center;
-  }
-  
-  .se2 img {
+}
+
+.se2 img {
     width: 95%;
     border: 4px solid #2758e8;
     padding: 5px;
@@ -404,33 +445,18 @@ section{
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-color: #ff09ff;
-  }
-  @media (min-width: 1000px) {
-    .banner .logo {
-        text-align: left;
-        margin-left: 213px;
-    }
+}
 
-    .banner .Text1 {
-        text-align: left;
-        margin-left: 180px;
-    }
-
-    .banner .Text2 {
-        text-align: left;
-        width: 45%;
-        margin-left: 30px;
-    }
-
-    .banner .Download {
-        text-align: left;
-        margin-left: 40px;
+@media (min-width: 1000px) {
+    .searchcontent {
+        width: 60%;
     }
 
     section {
         display: flex;
         align-items: center;
         padding: 50px 0px 50px 0px;
+        width: 80%;
     }
 
     .se2 img {
@@ -441,21 +467,6 @@ section{
         margin-left: 80px;
     }
 
-    .ceo {
-        display: flex;
-        text-align: center;
-    }
 
-    .ceo section {
-        width: 90%;
-        margin: auto;
-        margin-top: 30px;
-        margin-bottom: 25px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 60px 0px 60px 0px;
-    }
-    .langueges{
-        width: 40%;
-    }
+
 }
