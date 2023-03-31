@@ -282,8 +282,8 @@ function onlight() {
     document.getElementById("inp").style.background = "white"
     document.getElementById("inp").style.color = "black"
     document.getElementById("btn").style.color = "black"
-    document.getElementById("sed1").style.background = "white"
-    document.getElementById("se1h2").style.color = "black"
+    $('.sed1').css("background","white")
+    $('.se1h2').css("color","black")
     document.getElementById("searchengines").style.background = "white"
     document.getElementById("searchengines").style.color = "black"
     document.getElementById("biclose").style.color = "black"
@@ -311,7 +311,8 @@ function ondark() {
     document.getElementById("inp").style.background = "#1f2533"
     document.getElementById("inp").style.color = "white"
     document.getElementById("btn").style.color = "white"
-    document.getElementById("sed1").style.background = "#1f2533"
+    $('.sed1').css("background","#1f2533")
+    $('.se1h2').css("color","white")
     document.getElementById("se1h2").style.color = "white"
     document.getElementById("searchengines").style.background = "#1f2533"
     document.getElementById("searchengines").style.color = "white"
