@@ -39,6 +39,10 @@ function noneInformationdesign() {
 }
 function check() {
     // for search
+    setTimeout(() => {
+        const select = document.querySelector('select')
+        select.value = "Normal"
+    }, 100);
     document.getElementById("sugen").style.display = "none";
     if (localStorage.getItem("engine") === "Google") {
         googlesearchforlogic()
@@ -91,7 +95,6 @@ function check2() {
     // for mode
     if (localStorage.getItem("mode") === "light") {
         document.getElementById("bilight").style.display = "none"
-        console.log("Light Mode")
         onlight()
         if (localStorage.getItem("engine") === "Information") {
             Informationdesign()
@@ -100,7 +103,6 @@ function check2() {
     }
     else if (localStorage.getItem("mode") === "dark") {
         document.getElementById("bidark").style.display = "none"
-        console.log("Dark Mode")
         ondark()
         if (localStorage.getItem("engine") === "Information") {
             Informationdesign()
@@ -109,7 +111,6 @@ function check2() {
     }
     else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         document.getElementById("bilight").style.display = "none"
-        console.log("Light Mode")
         onlight()
         if (localStorage.getItem("engine") === "Information") {
             Informationdesign()
@@ -118,13 +119,16 @@ function check2() {
     }
     else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.getElementById("bidark").style.display = "none"
-        console.log("Dark Mode")
         ondark()
         if (localStorage.getItem("engine") === "Information") {
             Informationdesign()
         }
 
     }
+}
+function check3() {
+    const select = document.querySelector('select')
+    select.value = "Normal"
 }
 function lightmode() {
     localStorage.removeItem("mode")
@@ -156,6 +160,11 @@ function onlight() {
     document.getElementById("sugen").style.background = "white"
     document.getElementById("sugen").style.color = "black";
     document.getElementById("btn2").style.color = "black";
+    document.getElementById("filetype").style.background = "white"
+    document.getElementById("filetype").style.color = "black"
+    // document.getElementById("morescbtn").style.background = "white"
+    // document.getElementById("morescbtn").style.color = "black"
+    
     // document.getElementById("").style. = ""
     // document.getElementById("").style. = ""
     // document.getElementById("").style. = ""
@@ -186,6 +195,11 @@ function ondark() {
     document.getElementById("sugen").style.background = "#1f2533"
     document.getElementById("sugen").style.color = "white";
     document.getElementById("btn2").style.color = "white";
+    document.getElementById("filetype").style.background = "#1f2533"
+    document.getElementById("filetype").style.color = "white"
+    // document.getElementById("morescbtn").style.background = "#1f2533"
+    // document.getElementById("morescbtn").style.color = "white"
+    // document.getElementById("").style.color = ""
     // document.getElementById("").style. = ""
     // document.getElementById("").style.color = ""
     $('input').addClass('inp');
@@ -202,7 +216,13 @@ function inpclick() {
     document.getElementById("searchcontent").style.borderRadius = "0px";
     document.getElementById("searchbar").style.borderRadius = "0px";
     document.getElementById("searchbar").style.height = "65px";
+    document.getElementById("searchbar").style.border = "none";
+    document.getElementById("searchcontent").style.borderBottom = "3px solid";
+    document.getElementById("searchcontent").style.borderImage = "linear-gradient(315deg, #00ddff 0%, #ff00d4 74%) 80";
     document.getElementById("info").style.display = "none"
+    document.getElementById("moresc").style.display = "flex"
+    
+    // 
     document.getElementById("google").setAttribute("onclick", "googlesearchforlogic2()")
     document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic2()")
     document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic2()")
@@ -230,9 +250,13 @@ function inpclickback() {
     document.getElementById("searchcontent").style.borderTopLeftRadius = "10px";
     document.getElementById("searchbar").style.borderTopLeftRadius = "10px";
     document.getElementById("searchbar").style.borderTopRightRadius = "10px";
+    document.getElementById("searchbar").style.borderBottom = "3px solid";
+    document.getElementById("searchbar").style.borderImage = "linear-gradient(315deg, #00ddff 0%, #ff00d4 74%) 80";
+    document.getElementById("searchcontent").style.borderBottom = "none";
     document.getElementById("sugen").style.display = "none";
     document.getElementById("searchbar").style.height = "55px";
     document.getElementById("info").style.display = "flex";
+    document.getElementById("moresc").style.display = "none"
     removeandcorrect()
 }
 function removeandcorrect() {

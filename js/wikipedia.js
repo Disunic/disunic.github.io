@@ -82,7 +82,7 @@ function button() {
                                 const myDiv = document.getElementById("div_");
                                 myDiv.setAttribute("id", newId);
                                 var i = 0;
-                                var speed = 35;
+                                var speed = 10;
                                 typeWriter()
                                 function typeWriter() {
                                     if (i < opoo.length) {
