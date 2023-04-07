@@ -15,6 +15,15 @@
 
 </html>
 <style>
+    .gsc-adBlock {
+        display: none !important;
+    }
+
+    .gs-fileFormat {
+        margin: 5px 0px 6px 0px !important;
+    }
+</style>
+<style>
     body {
         margin: 0px;
         background: #f8f9f9 !important;
@@ -448,6 +457,10 @@
         fill: white !important;
     }
 
+    .dark .gs-spelling {
+        color: white !important;
+    }
+
     .dark .gs-result.gs-imageResult.gs-imageResult-popup {
         background: #1f2533;
         border: 1px solid white;
@@ -456,17 +469,19 @@
     .dark .gsc-imageResult.gsc-imageResult-popup.gsc-result {
         /* border: 1px solid white; */
     }
+
+    .dark .gs-fileFormat span {
+        color: #ffd400;
+    }
 </style>
 <script>
     function checkonload() {
         let mode = localStorage.getItem("mode")
         if (mode === "dark") {
             document.getElementById("body").setAttribute("class", "dark")
-            console.log("d")
         }
         else if (mode === "light") {
             document.getElementById("body").setAttribute("class", "")
-            console.log("l")
         }
         else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
             document.getElementById("body").setAttribute("class", "")
