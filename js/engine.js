@@ -9,6 +9,7 @@ function googlesearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function googlesearchforlogic2() {
     engine = "Google"
@@ -19,6 +20,31 @@ function googlesearchforlogic2() {
     searchch.src = "./img/external/googlelogo.png";
     searchch2.src = "./img/external/googlelogo.png";
     changesearchenginecls2();
+    document.getElementById("filetype").disabled = false;
+}
+function disunicsearchforlogic() {
+    engine = "Disunic"
+    localStorage.removeItem("engine");
+    localStorage.setItem("engine", "Disunic");
+    let searchch = document.getElementById("searchch");
+    let searchch2 = document.getElementById("searchch2");
+    searchch.src = "./img/external/disuniclogo.png";
+    searchch2.src = "./img/external/disuniclogo.png";
+    changesearchenginecls()
+    noneInformationdesign();
+    check2();
+    document.getElementById("filetype").disabled = false;
+}
+function disunicsearchforlogic2() {
+    engine = "Disunic"
+    localStorage.removeItem("engine");
+    localStorage.setItem("engine", "Disunic");
+    let searchch = document.getElementById("searchch");
+    let searchch2 = document.getElementById("searchch2");
+    searchch.src = "./img/external/disuniclogo.png";
+    searchch2.src = "./img/external/disuniclogo.png";
+    changesearchenginecls2();
+    document.getElementById("filetype").disabled = false;
 }
 function informationsearchforlogic() {
     engine = "Information"
@@ -42,6 +68,7 @@ function bingsearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function bingsearchforlogic2() {
     engine = "Bing"
@@ -53,6 +80,7 @@ function bingsearchforlogic2() {
     searchch.src = "./img/external/binglogo.jpeg";
     searchch2.src = "./img/external/binglogo.jpeg";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function bravesearchforlogic() {
     engine = "Brave"
@@ -66,6 +94,7 @@ function bravesearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function bravesearchforlogic2() {
     engine = "Brave"
@@ -77,6 +106,7 @@ function bravesearchforlogic2() {
     searchch.src = "./img/external/brave.png";
     searchch2.src = "./img/external/brave.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function yahoosearchforlogic() {
     engine = "Yahoo"
@@ -90,6 +120,7 @@ function yahoosearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function yahoosearchforlogic2() {
     engine = "Yahoo"
@@ -101,6 +132,7 @@ function yahoosearchforlogic2() {
     searchch.src = "./img/external/yahoologo.jpeg";
     searchch2.src = "./img/external/yahoologo.jpeg";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function duckduckgosearchforlogic() {
     engine = "DuckDuckGo"
@@ -114,6 +146,7 @@ function duckduckgosearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function duckduckgosearchforlogic2() {
     engine = "DuckDuckGo"
@@ -125,6 +158,7 @@ function duckduckgosearchforlogic2() {
     searchch.src = "./img/external/duckduckgologo.png";
     searchch2.src = "./img/external/duckduckgologo.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function metagersearchforlogic() {
     engine = "Metager"
@@ -138,6 +172,7 @@ function metagersearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function metagersearchforlogic2() {
     engine = "Metager"
@@ -149,6 +184,7 @@ function metagersearchforlogic2() {
     searchch.src = "./img/external/metager.png";
     searchch2.src = "./img/external/metager.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function aolsearchforlogic() {
     engine = "Aol"
@@ -162,6 +198,7 @@ function aolsearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function aolsearchforlogic2() {
     engine = "Aol"
@@ -173,6 +210,7 @@ function aolsearchforlogic2() {
     searchch.src = "./img/external/aollogo.png";
     searchch2.src = "./img/external/aollogo.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function mojeeksearchforlogic() {
     engine = "Mojeek"
@@ -186,6 +224,7 @@ function mojeeksearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function mojeeksearchforlogic2() {
     engine = "Mojeek"
@@ -197,6 +236,7 @@ function mojeeksearchforlogic2() {
     searchch.src = "./img/external/mojeeklogo.svg";
     searchch2.src = "./img/external/mojeeklogo.svg";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function qwantsearchforlogic() {
     engine = "Qwant"
@@ -210,6 +250,7 @@ function qwantsearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function qwantsearchforlogic2() {
     engine = "Qwant"
@@ -221,6 +262,7 @@ function qwantsearchforlogic2() {
     searchch.src = "./img/external/qwant.jfif";
     searchch2.src = "./img/external/qwant.jfif";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function dogpilesearchforlogic() {
     engine = "Dogpile"
@@ -234,6 +276,7 @@ function dogpilesearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function dogpilesearchforlogic2() {
     engine = "Dogpile"
@@ -245,6 +288,7 @@ function dogpilesearchforlogic2() {
     searchch.src = "./img/external/dogpilelogo.png";
     searchch2.src = "./img/external/dogpilelogo.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function ecosiasearchforlogic() {
     engine = "Ecosia"
@@ -258,6 +302,7 @@ function ecosiasearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function ecosiasearchforlogic2() {
     engine = "Ecosia"
@@ -269,6 +314,7 @@ function ecosiasearchforlogic2() {
     searchch.src = "./img/external/ecosialogo.jfif";
     searchch2.src = "./img/external/ecosialogo.jfif";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function yandexsearchforlogic() {
     engine = "Yandex"
@@ -282,6 +328,7 @@ function yandexsearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function yandexsearchforlogic2() {
     engine = "Yandex"
@@ -293,6 +340,7 @@ function yandexsearchforlogic2() {
     searchch.src = "./img/external/Yandexlogo.png";
     searchch2.src = "./img/external/Yandexlogo.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
 }
 function kiddlesearchforlogic() {
     engine = "Kiddle"
@@ -306,6 +354,7 @@ function kiddlesearchforlogic() {
     changesearchenginecls()
     noneInformationdesign();
     check2();
+    document.getElementById("filetype").disabled = false;
 }
 function kiddlesearchforlogic2() {
     engine = "Kiddle"
@@ -317,4 +366,31 @@ function kiddlesearchforlogic2() {
     searchch.src = "./img/external/Kiddle.png";
     searchch2.src = "./img/external/Kiddle.png";
     changesearchenginecls2()
+    document.getElementById("filetype").disabled = false;
+}
+function codepensearchforlogic() {
+    engine = "Codepen"
+    localStorage.removeItem("engine");
+    localStorage.setItem("engine", "Codepen");
+    let searchch = document.getElementById("searchch");
+    let searchch2 = document.getElementById("searchch2");
+    document.getElementById("searchengines").style.display = "none"
+    searchch.src = "./img/external/codepen.png";
+    searchch2.src = "./img/external/codepen.png";
+    changesearchenginecls()
+    noneInformationdesign();
+    check2();
+    document.getElementById("filetype").disabled = true;
+}
+function codepensearchforlogic2() {
+    engine = "Kiddle"
+    localStorage.removeItem("Codepen");
+    localStorage.setItem("engine", "Codepen");
+    let searchch = document.getElementById("searchch");
+    let searchch2 = document.getElementById("searchch2");
+    document.getElementById("searchengines").style.display = "none"
+    searchch.src = "./img/external/codepen.png";
+    searchch2.src = "./img/external/codepen.png";
+    changesearchenginecls2()
+    document.getElementById("filetype").disabled = true;
 }

@@ -47,6 +47,9 @@ function check() {
     if (localStorage.getItem("engine") === "Google") {
         googlesearchforlogic()
     }
+    else if (localStorage.getItem("engine") === "Disunic") {
+        disunicsearchforlogic()
+    }
     else if (localStorage.getItem("engine") === "Bing") {
         bingsearchforlogic()
     }
@@ -86,6 +89,9 @@ function check() {
     }
     else if (localStorage.getItem("engine") === "Kiddle") {
         kiddlesearchforlogic()
+    }
+    else if (localStorage.getItem("engine") === "Codepen") {
+        codepensearchforlogic()
     }
     else {
         googlesearchforlogic()
@@ -224,6 +230,7 @@ function inpclick() {
     
     // 
     document.getElementById("google").setAttribute("onclick", "googlesearchforlogic2()")
+    document.getElementById("disunic").setAttribute("onclick", "disunicsearchforlogic2()")
     document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic2()")
     document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic2()")
     document.getElementById("yahoo").setAttribute("onclick", "yahoosearchforlogic2()")
@@ -236,6 +243,7 @@ function inpclick() {
     document.getElementById("ecosia").setAttribute("onclick", "ecosiasearchforlogic2()")
     document.getElementById("yandex").setAttribute("onclick", "yandexsearchforlogic2()")
     document.getElementById("kiddle").setAttribute("onclick", "kiddlesearchforlogic2()")
+    document.getElementById("codepen").setAttribute("onclick", "codepensearchforlogic2()")
 }
 function inpclickback() {
     document.getElementById("main2").style.display = "";
@@ -261,6 +269,7 @@ function inpclickback() {
 }
 function removeandcorrect() {
     document.getElementById("google").setAttribute("onclick", "googlesearchforlogic()")
+    document.getElementById("disunic").setAttribute("onclick", "disunicsearchforlogic()")
     document.getElementById("bing").setAttribute("onclick", "bingsearchforlogic()")
     document.getElementById("brave").setAttribute("onclick", "bravesearchforlogic()")
     document.getElementById("yahoo").setAttribute("onclick", "yahoosearchforlogic()")
@@ -273,4 +282,5 @@ function removeandcorrect() {
     document.getElementById("ecosia").setAttribute("onclick", "ecosiasearchforlogic()")
     document.getElementById("yandex").setAttribute("onclick", "yandexsearchforlogic()")
     document.getElementById("kiddle").setAttribute("onclick", "kiddlesearchforlogic()")
+    document.getElementById("codepen").setAttribute("onclick", "codepensearchforlogic()")
 }

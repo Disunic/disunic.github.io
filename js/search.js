@@ -3,6 +3,9 @@ function search() {
     if (engine === "Google") {
         window.open("https://google.com/search?q=" + input, "_self")
     }
+    else if (engine === "Disunic") {
+        window.open("https://disunic.github.io/search.html#gsc.tab=0&gsc.q=" + input, "_self")
+    }
     else if (engine === "Bing") {
         window.open("https://www.bing.com/search?q=" + input, "_self")
     }
@@ -39,6 +42,9 @@ function search() {
     else if (engine === "Kiddle") {
         window.open("https://www.kiddle.co/s.php?q=" + input, "_self")
     }
+    else if (engine === "Codepen") {
+        window.open("https://codepen.io/search/pens?q=" + input, "_self")
+    }
     else {
     }
 }
@@ -47,6 +53,9 @@ function searchusingtype() {
     let input = document.getElementById("inp").value
     if (engine === "Google") {
         window.open("https://google.com/search?q="  + input +" filetype:"+filetype2, "_self")
+    }
+    else if (engine === "Disunic") {
+        window.open("https://disunic.github.io/search.html#gsc.tab=0&gsc.q=" + input +" filetype:"+filetype2, "_self")
     }
     else if (engine === "Bing") {
         window.open("https://www.bing.com/search?q=" + input +" filetype:"+filetype2, "_self")

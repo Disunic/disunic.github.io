@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disunic Search Beta</title>
 </head>
-<body>
+
+<body class="" id="body" onload="checkonload()">
     <script async src="https://cse.google.com/cse.js?cx=0fbf3f19074e8025e"></script>
     <div class="gcse-search"></div>
 </body>
+
 </html>
-<style>
+<!-- <style>
     body {
         margin: 0px;
         background: #f8f9f9 !important;
@@ -217,4 +220,260 @@
     .gsc-tabHeader.gsc-tabhInactive.gsc-inline-block {
         background: transparent !important;
     }
+</style> -->
+<style>
+    .dark {
+        margin: 0px;
+        background: #000000 !important;
+    }
+
+    /* Search On Google Block */
+    .dark .gcsc-find-more-on-google-root {
+        display: none;
+    }
+
+    .dark .gs-title {
+        /* margin-bottom: 10px !important; */
+        font-size: 20px !important;
+    }
+
+    .dark .gs-title a {
+        color: #6dff8c !important;
+    }
+
+    .dark .gs-title b {
+        color: #6dff8c !important;
+        font-weight: 400;
+        font-size: 20px !important;
+    }
+
+    .dark .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
+        color: #c0c0c0 !important;
+        font-size: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .dark .gs-bidi-start-align.gs-snippet {
+        font-size: 15px !important;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        color: white !important;
+    }
+
+    .dark .gs-richsnippet-box {
+        margin-top: 10px;
+    }
+
+    .dark span.gsc-richsnippet-showsnippet-label {
+        color: #00a1ff !important;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .dark img.gs-image {
+        border-radius: 10px;
+        width: 90px !important;
+        height: 90px !important;
+        max-width: 90px !important;
+        max-height: 90px !important;
+        border: none !important;
+        box-shadow: 0px 0px 4px 0px rgb(178, 178, 178);
+    }
+
+    .dark a.gs-image {
+        border: none !important;
+    }
+
+    .dark .gsc-control-cse {
+        padding: 0px !important;
+    }
+
+    .dark .gsc-control-cse.gsc-control-cse-en {
+        background: #000000 !important;
+        border: none !important;
+    }
+
+    .dark .gsc-webResult.gsc-result {
+        border-bottom: 0px !important;
+        background: #1f2533 !important;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 15px 8px;
+        border: none !important;
+    }
+
+    .dark .gsc-richsnippet-popup-box {
+        width: 90% !important;
+        padding: 15px 10px !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 75% !important;
+        top: 50% !important;
+        bottom: 50% !important;
+        border-radius: 15px !important;
+        overflow: hidden !important;
+    }
+
+    .dark .gsc-richsnippet-popup-box-title {
+        display: grid;
+        align-items: center;
+    }
+
+    .dark .gsc-richsnippet-popup-box-title-url {
+        margin-top: 10px;
+    }
+
+    .dark .gsc-richsnippet-popup-close-button {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .dark .gsc-positioningWrapper {
+        width: 90% !important;
+        margin: auto;
+    }
+
+    .dark table.gsc-search-box {
+        margin: auto;
+        justify-content: center;
+        height: 55px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 2px 0px rgb(240, 240, 240);
+        border-bottom: 3px solid;
+        border-image: linear-gradient(315deg, #00ddff 0%, #ff00d4 74%) 80;
+        padding: 0px 10px 0px 5px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 10px !important;
+        width: 90% !important;
+        background: #1f2533 !important;
+    }
+
+
+
+    .dark .gsc-input-box {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        height: 55px !important;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .dark .gsc-input-box input {
+        background: transparent !important;
+        color: white !important;
+    }
+
+    .dark .gsc-search-button-v2 {
+        width: auto;
+        padding: 11px 10px;
+        margin: 0;
+        height: 100% !important;
+        border-radius: 0;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background: transparent !important;
+        fill: black !important;
+        border: none !important;
+    }
+
+    .dark .gsc-search-button-v2 svg {
+        width: 20px;
+        fill: rgb(255, 255, 255) !important;
+    }
+
+    .dark td.gssb_f {
+        display: none !important;
+    }
+
+    .dark td.gssb_e {
+        width: 90% !important;
+        margin: auto !important;
+    }
+
+    .dark td.gssb_a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #3c5fa4;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+    }
+
+    .dark table.gstl_50.gssb_c {
+        width: 90% !important;
+        left: 0px !important;
+        right: 0px !important;
+        margin: auto !important;
+        border: none !important;
+    }
+
+    .dark tbody {
+        width: 100% !important;
+        background: #1f2533 !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    .dark table.gsc-completion-container {
+        width: 100% !important;
+    }
+
+    .dark .gsc-tabsArea {
+        padding: 5px 0px 0px 0px;
+        background: transparent;
+        border: none !important;
+        box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
+    }
+
+    .dark .gsc-tabHeader.gsc-inline-block.gsc-tabhActive {
+        background: transparent !important;
+        color: white !important;
+    }
+
+    .dark .gsc-tabHeader.gsc-tabhInactive.gsc-inline-block {
+        background: transparent !important;
+        color: white !important;
+    }
+
+    .dark .gsc-cursor {
+        color: white;
+    }
+
+    .dark svg.gsc-cursor-chevron {
+        fill: white !important;
+    }
+
+    .dark .gs-result.gs-imageResult.gs-imageResult-popup {
+        background: #1f2533;
+        border: 1px solid white;
+    }
+
+    .dark .gsc-imageResult.gsc-imageResult-popup.gsc-result {
+        /* border: 1px solid white; */
+    }
 </style>
+<script>
+    function checkonload() {
+        let mode = localStorage.getItem("mode")
+        if (mode === "dark") {
+            document.getElementById("body").setAttribute("class", "dark")
+            console.log("d")
+        }
+        else if (mode === "light") {
+            document.getElementById("body").setAttribute("class", "")
+            console.log("l")
+        }
+        else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.getElementById("body").setAttribute("class", "")
+        }
+        else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById("body").setAttribute("class", "dark")
+
+        }
+    }
+</script>
