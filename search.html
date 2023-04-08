@@ -22,6 +22,18 @@
     .gs-fileFormat {
         margin: 5px 0px 6px 0px !important;
     }
+    .gsc-results{
+        width: 100% !important;
+    }
+    .gsc-above-wrapper-area{
+        width: 90% !important;
+        margin: auto;
+        color: white !important;
+        margin-top: 10px;
+    }
+    div#resInfo-0{
+        color:  rgb(0, 0, 0);
+    }
 </style>
 <style>
     body {
@@ -161,6 +173,8 @@
         box-sizing: border-box;
         background: transparent !important;
         border: none !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
     .gsc-input-box input {
@@ -371,6 +385,8 @@
         box-sizing: border-box;
         background: transparent !important;
         border: none !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
     .dark .gsc-input-box input {
@@ -473,6 +489,9 @@
     .dark .gs-fileFormat span {
         color: #ffd400;
     }
+    .dark div#resInfo-0{
+        color:  rgb(255, 255, 255) !important;
+    }
 </style>
 <script>
     function checkonload() {
@@ -492,3 +511,11 @@
         }
     }
 </script>
+<style>
+    @media (min-width: 800px) {
+        .gsc-wrapper {
+            width: 90% !important;
+            margin: auto !important;
+        }
+    }
+</style>
