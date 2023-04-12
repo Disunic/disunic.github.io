@@ -258,10 +258,9 @@ a.gs-image {
 /*  */
 
 /* Img Result */
-.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult {
+.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult{
     border-color: #FFFFFF;
     background-color: #FFFFFF;
     width: 90% !important;
-    margin: 10px !important;
 }
 /*  */
