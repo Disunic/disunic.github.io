@@ -27,7 +27,8 @@ function checkonload2() {
             }
         }
         catch {
-            window.open("https://disunic.github.io/","_self")
+            // window.open("https://disunic.github.io/","_self")
+            console.log("error")
         }
     }, 50);
 }

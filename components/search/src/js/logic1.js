@@ -9,7 +9,8 @@ function mainload() {
                                 </div>`;
     }
     catch{
-        window.open("https://disunic.github.io/","_self")
+        // window.open("https://disunic.github.io/","_self")
+        console.log("error")
     }
     // Search Button
     const buttonimg = document.getElementsByClassName("gsc-search-button-v2");
