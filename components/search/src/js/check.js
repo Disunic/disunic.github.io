@@ -4,10 +4,10 @@ function checkonload() {
         document.getElementById("body").setAttribute("class", "dark")
     }
     else if (mode === "light") {
-        document.getElementById("body").setAttribute("class", "")
+        document.getElementById("body").setAttribute("class", "light")
     }
     else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.getElementById("body").setAttribute("class", "")
+        document.getElementById("body").setAttribute("class", "light")
     }
     else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.getElementById("body").setAttribute("class", "dark")

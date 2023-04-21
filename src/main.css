@@ -132,7 +132,8 @@ section {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.moresc{
+
+.moresc {
     overflow-x: scroll;
     padding-top: 10px;
     padding-bottom: 5px;
@@ -141,19 +142,22 @@ section {
     display: none;
 
 }
-.moresc select{
+
+.moresc select {
     padding: 10px;
     border: none;
-    box-shadow: 0px 0px 5px 0px rgb(163, 164, 165);
+    box-shadow: 0px 0px 2px 0px rgb(163, 164, 165);
     outline: 0;
     border-bottom: 3px solid #006aff;
     background: white;
-    border-radius: 1px;
     font-size: 15px;
     margin-right: 15px;
     cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
-.moresc button{
+
+.moresc button {
     background: white;
     border: none;
     box-shadow: 0px 0px 5px 0px rgb(163, 164, 165);
@@ -161,6 +165,7 @@ section {
     padding: 0px 10px;
     border-bottom: 3px solid #006aff;
 }
+
 .searchbar input {
     width: 100%;
     outline: 0;
@@ -194,12 +199,12 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 85%;
+    /* width: 85%; */
     box-shadow: 0px 0px 10px 1px gray;
     padding: 15px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     background: white;
-    height: 75%;
+    /* height: 75%; */
     overflow-y: scroll;
     display: none;
 }
@@ -227,14 +232,16 @@ section {
     border: none;
     background: transparent;
     outline: 0;
+    cursor: pointer;
 }
 
 .searchengines .cc img {
-    width: 45px;
-    border: 2px solid gray;
+    width: 50px;
+    /* border: 2px solid gray; */
+    box-shadow: 0px 0px 7px 0px #c9c1c1;
     margin-right: 14px;
     background: rgb(255, 255, 255);
-    border-radius: 30px;
+    border-radius: 8px;
     padding: 3px;
     transition: 1s;
 }
@@ -294,8 +301,8 @@ section {
     width: 100%;
     justify-content: center;
     height: 15%;
-    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-    background: white;
+    /* box-shadow: 0 1px 6px rgb(32 33 36 / 28%); */
+    /* background: white; */
 }
 
 .jfl {
@@ -326,7 +333,7 @@ section {
 .jfl button {
     border: none;
     background: transparent;
-
+    outline: 0;
 }
 
 .user {
@@ -346,16 +353,19 @@ section {
 
 .bot {
     padding: 20px 15px 20px 15px;
-    background: white;
+    /* background: white; */
     text-align: center;
-    width: 80%;
+    width: 85%;
     margin: auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    color: #000000;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 30px;
+    /* color: #000000; */
     animation: popup 200ms;
-    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    /* box-shadow: 0 1px 6px rgb(32 33 36 / 28%); */
 }
 
 @keyframes popup {
@@ -496,4 +506,40 @@ section {
 
 
 
+}
+
+
+
+
+/*  */
+.chatdark .chatbar {
+    background: #1f2533;
+    box-shadow: 0px 0px 3px 0px rgb(255 255 255);
+}
+
+.chatdark .chatbar .jfl {
+    box-shadow: 0px 0px 2px 0px rgb(183 183 183);
+}
+
+.chatdark .chatbar input {
+    background: transparent;
+    color: white;
+}
+
+.chatdark .chatbar .jfl button i.bi.bi-lightning-charge {
+    color: #1fd1f9 !important;
+}
+
+.chatdark #chatlog #userlogo {
+    color: white;
+}
+
+.chatdark #chatlog .user {
+    color: white;
+}
+
+.chatdark .bot {
+    background: transparent;
+    box-shadow: 0px 0px 3px 0px #ffffff;
+    color: white;
 }

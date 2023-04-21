@@ -26,9 +26,9 @@ function Informationdesign() {
     document.getElementById("logo").style.display = "none";
     document.getElementById("searchcontent").style.display = "none";
     document.getElementById("chatbox").style.display = "block";
-    document.getElementById("bidark").setAttribute("onclick", "")
+    // document.getElementById("bidark").setAttribute("onclick", "")
     document.getElementById("main2").style.display = "none";
-    onlight()
+    // onlight()
 }
 function noneInformationdesign() {
     document.getElementById("logo").style.display = "inline-flex";
@@ -171,7 +171,7 @@ function onlight() {
     // document.getElementById("morescbtn").style.background = "white"
     // document.getElementById("morescbtn").style.color = "black"
     
-    // document.getElementById("").style. = ""
+    document.getElementById("chatbox").setAttribute("class","chatlight")
     // document.getElementById("").style. = ""
     // document.getElementById("").style. = ""
     // document.getElementById("").style. = ""
@@ -208,6 +208,7 @@ function ondark() {
     // document.getElementById("").style.color = ""
     // document.getElementById("").style. = ""
     // document.getElementById("").style.color = ""
+    document.getElementById("chatbox").setAttribute("class","chatdark")
     $('input').addClass('inp');
 }
 function inpclick() {

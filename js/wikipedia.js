@@ -94,7 +94,7 @@ function button() {
                                             i++;
                                             // timer()
                                         }, 3000);
-                                        timer()
+                                        // timer()
                                         setTimeout(typeWriter, speed);
 
                                     }
