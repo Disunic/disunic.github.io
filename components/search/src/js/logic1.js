@@ -7,6 +7,7 @@ function mainload() {
         tabbar[0].innerHTML = `<div class="tabs">
                                     <div class="tb" id="sweb" onclick='sweb()'">Web</div>
                                     <div class="tb" id="simg" onclick='simg()'>Images</div>
+                                    <div class="tb" id="svideo" onclick='svideo()'>Videos</div>
                                 </div>`;
     }
     catch {
@@ -34,7 +35,11 @@ function simg() {
     let query = document.getElementById("gsc-i-id1").value;
     window.open("https://disunic.github.io/search.html#gsc.tab=1&gsc.sort=&gsc.q=" + query, "_self")
 }
-
+function svideo() {
+    localStorage.setItem("tab", "video")
+    checkonload2()
+    let query = document.getElementById("gsc-i-id1").value;
+}
 function wiki() {
     setTimeout(() => {
         var userInput = $("#gsc-i-id1").val();
