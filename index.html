@@ -308,5 +308,22 @@
             document.documentElement.scrollTop = 0;
         }
     }
-
+    function checkCountry() {
+            const allowedCountries = ['US', 'CA', 'GB' , 'IN'];
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    const userCountry = data.country;
+                    if (allowedCountries.includes(userCountry)) {
+                        console.log('Country allowed:', userCountry);
+                    } else {
+                        console.log('Country not allowed:', userCountry);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching country:', error);
+                    document.getElementById('main').innerHTML = `YOU ARE NOT ALLOW TO USE THIS WEBSITE !!!`
+                });
+        }
+    checkCountry();
 </script>
