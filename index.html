@@ -322,7 +322,9 @@
                 })
                 .catch(error => {
                     console.error('Error fetching country:', error);
-                    document.getElementById('main').innerHTML = `YOU ARE NOT ALLOW TO USE THIS WEBSITE !!!`
+                    setTimeout(() => {
+                        document.getElementById('main').innerHTML = `YOU ARE NOT ALLOW TO USE THIS WEBSITE !!!`
+                    }, 2000);
                 });
         }
     checkCountry();
