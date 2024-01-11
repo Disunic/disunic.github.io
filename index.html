@@ -318,6 +318,7 @@
                         console.log('Country allowed:', userCountry);
                     } else {
                         console.log('Country not allowed:', userCountry);
+                        document.getElementById('main').innerHTML = `YOU ARE NOT ALLOW TO USE THIS WEBSITE !!!`
                     }
                 })
                 .catch(error => {
