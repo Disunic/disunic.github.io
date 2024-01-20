@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script async src="https://cse.google.com/cse.js?cx=1e55c315a07763f52"></script>
+</head>
+
+<body onload="redir()">
+    <div class="function">
+        <h2 class="fh2">Disunic<span>Beta</span></h2>
+        <div class="search">
+            <div class="gcse-search"></div>
+        </div>
+        <h3 class="fh3">Powered By DisunicX</h3>
+    </div>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .fh2 {
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 50px;
+            color: #0091ff;
+            font-weight: 700;
+            align-items: center;
+        }
+
+        .fh2 span {
+            font-size: 20px;
+            margin-left: 10px;
+            color: #ff0080;
+
+        }
+
+        .fh3 {
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 20px;
+        }
+
+        .searchengines {
+            display: inline-block;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        .searchengines button {
+            display: inline-flex;
+            background-color: transparent;
+            border: none;
+            border-bottom: 4px solid rgb(0, 132, 255);
+            padding: 0px 7px 0px 0px;
+            height: 45px;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 10px 10px 10px;
+            font-weight: 600;
+            font-size: 17px;
+            /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+            user-select: none;
+            box-shadow: 0px 0px 5px 2px #c7c7c7;
+        }
+
+        .searchengines img {
+            width: 30px;
+            /* display: inline; */
+            margin: auto;
+            -webkit-user-drag: none;
+        }
+
+        /* Engine */
+        .gsc-results-wrapper-overlay {
+            background: #f2f4f7 !important;
+            width: 100% !important;
+            left: 0 !important;
+            top: 0 !important;
+            height: 100% !important;
+            padding: 0px !important;
+        }
+
+        .gsc-tabsArea {
+            /* margin-top: 50px !important; */
+        }
+
+        .gsc-expansionArea {
+            width: 100% !important;
+        }
+
+        .gsc-webResult.gsc-result {
+            text-align: left;
+        }
+
+        .gsc-results {
+            width: 100% !important;
+        }
+
+        .gsc-webResult.gsc-result {
+            padding: 15px !important;
+            background: white;
+            margin: 15px 0px 15px 0px !important;
+        }
+
+        .gs-title {
+            margin: 10px 0px 10px 0px !important;
+            font-size: 18px !important;
+            /* margin-left: 50px !important; */
+        }
+
+        .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
+            background: -webkit-linear-gradient(140deg, #0091ff, #ff0080) !important;
+            font-weight: 600;
+            -webkit-background-clip: text !important;
+            /* background-clip: text !important; */
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .gsc-results-close-btn.gsc-results-close-btn-visible {
+            display: none !important;
+            position: fixed !important;
+            z-index: 1;
+            bottom: 40px !important;
+
+        }
+
+        .gsc-results-close-btn {
+            top: auto !important;
+            right: 30px !important;
+            bottom: 40px !important;
+            background-image: url(./x-lg.svg) !important;
+            background-position: center !important;
+            height: auto !important;
+            width: auto !important;
+            padding: 25px !important;
+            border-radius: 30px !important;
+            background-color: rgb(31, 31, 29) !important;
+
+        }
+
+        img.gs-image {
+            border: none !important;
+            box-shadow: 0px 0px 10px 1px rgb(216, 216, 216);
+            width: 45px !important;
+            height: 45px !important;
+            object-fit: contain !important;
+            border-radius: 30px;
+            /* position: absolute; */
+            /* left: 0; */
+            /* margin-top: -56px !important;
+    margin-left: 20px; */
+        }
+
+        a.gs-image {
+            border: none !important;
+            width: 35px !important;
+            height: 35px !important;
+            /* position: absolute; */
+
+            /* left: 0; */
+            margin-top: -56px !important;
+            /* margin-left: 20px; */
+        }
+
+        .gsc-thumbnail-inside {
+            /* margin-left: 45px; */
+        }
+
+        .gsc-webResult.gsc-result {
+            /* line-height: 20px; */
+        }
+
+        b {
+            font-size: 18px !important;
+            /* margin-left: -40px ; */
+        }
+
+        .gs-bidi-start-align.gs-snippet {
+            font-size: 13px !important;
+            margin-top: 10px;
+            font-weight: 700 !important;
+            letter-spacing: 1px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .gs-bidi-start-align.gs-snippet b {
+            font-size: 13px !important;
+            margin-top: 10px;
+            margin-left: 0px !important;
+            color: rgb(11, 144, 227) !important;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        img.gs-image.gs-image-scalable {
+            /* object-fit: cover !important; */
+            width: 100px !important;
+            height: 100px !important;
+            max-width: 100px !important;
+            max-height: 100px !important;
+            border-radius: 2px !important;
+            padding: 5px;
+        }
+
+        img.gcsc-branding-img-noclear {
+            display: none !important;
+        }
+
+        .gsc-above-wrapper-area {
+            display: block !important;
+        }
+
+        .gsc-result-info {
+            text-align: center !important;
+        }
+
+        .gsc-positioningWrapper {
+            position: fixed !important;
+            /* display: contents; */
+            background: #ffffff;
+            z-index: 1;
+            width: 100%;
+            color: white;
+            box-shadow: 0px 1px 10px 0px #a7a7a7;
+        }
+
+        .gsc-above-wrapper-area {
+            margin-top: 70px !important;
+
+        }
+
+        input#gsc-i-id1 {
+            background: none no-repeat !important;
+            font-weight: 600;
+            color: #0091ff;
+        }
+
+        form.gsc-search-box {
+            font-size: 13px;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0px !important;
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .search {
+
+            display: flex;
+            width: 80%;
+            justify-content: center;
+            height: 45px;
+            margin: auto;
+            box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+            border-radius: 10px;
+            padding: 5px 5px 7px 10px;
+            margin-bottom: 30px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        button.gsc-search-button.gsc-search-button-v2 svg {
+            /* background-color: transparent; */
+            fill: url(#SvgjsLinearGradient1490);
+            width: 24px;
+            height: 24px;
+        }
+
+        div#___gcse_0 {
+            width: 100% !important;
+        }
+
+        .gsc-control-cse.gsc-control-cse-en {
+            /* height: 45px !important; */
+            background: rgb(255, 255, 255);
+            padding: 0px 0px 0px 0px;
+
+        }
+
+        .td .gssb_a img {
+            display: none !important;
+        }
+
+        .gsc-control-cse {
+            border: none !important;
+        }
+
+        button#gscsearchbutton {
+            background: white !important;
+            border: none !important;
+        }
+
+        table.gsc-search-box {
+            border-style: none;
+            border-width: 0;
+            border-spacing: 0 0;
+            width: 100%;
+            margin-bottom: 0px !important;
+        }
+
+        .gsc-input-box {
+            border: none !important;
+        }
+
+        .gsc-search-box {}
+
+        .gsc-tabsArea {
+            /* margin: 0px !important; */
+            border: none !important;
+        }
+
+        .gsc-webResult.gsc-result.gsc-promotion {
+            background: white !important;
+        }
+
+        img.gs-promotion-image {
+            border: none !important;
+            box-shadow: 0px 0px 10px 1px rgb(216, 216, 216);
+            width: 45px !important;
+            height: 45px !important;
+            object-fit: contain !important;
+            border-radius: 30px;
+        }
+
+        .gsc-result-info {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+            font-weight: 600;
+            color: #0091ff !important;
+        }
+
+        .gs-promotion .gs-visibleUrl,
+        .gs-webResult .gs-visibleUrl {
+            color: #21b9db !important;
+            font-weight: 600;
+        }
+    </style>
+</body>
+<script>
+    // function redir() {
+    //     const inpop = document.getElementById("gsc-i-id1").value
+    //     if (inpop === "") {
+    //         window.location = "http://disunic20.github.io";
+    //     }
+    // }
+    setInterval(function redir() {
+        const inpop = document.getElementById("gsc-i-id1").value
+        if (inpop === "") {
+            history.back()
+        }
+    }, 1000)
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bug  - Disunic</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <h2>Report Bugs</h2>
+    <div class="Thanks" id="Thanks" style="display: none;"></div>
+    <div id="main">
+        <div id="messages" style="display: none;"></div>
+        <form id="message-form">
+                <p>Enter Your Name <span>*</span></p>
+                <input type="text" id="username" autocomplete="off" placeholder="Type Here..." required>
+
+                <p>Enter Your Email <span>**</span></p>
+                <input type="email" name="email" id="email" autocomplete="off" placeholder="Type Here..." required>
+
+
+                <p>Choose App or Software<span>**</span></p>
+                <select name="" id="product" required>
+                    <optgroup label="Android">
+                        <option value="Calculator Android">Calculator Android</option>
+                        <option value="Disunic Android">Disunic Android</option>
+                        <option value="DisunicX Android">DisunicX Android</option>
+                        <option value="Wikipedia Android">Wikipedia Android</option>  
+                    </optgroup>
+                    <optgroup label="Windows">
+                        <option value="Disunic Windows">Disunic Windows</option>
+                        <option value="DisunicX Windows">DisunicX Windows</option>
+                    </optgroup>
+                    <optgroup label="Linux">
+                        <option value="Disunic Linux">Disunic Linux</option>
+                        <option value="DisunicX Linux">DisunicX Linux</option>
+                    </optgroup>
+                    <optgroup label="Websites">
+                        <option value="Disunic Website">Disunic Website</option>
+                    </optgroup>
+                    
+                          
+                </select>
+                <p>Type The Bug <span>*</span></p>
+                <textarea required name="" id="bug" cols="30" rows="5" autocomplete="off" placeholder="Type Here..."></textarea>
+            <button id="message-btn" type="submit" onclick="sendMail()">Submit</button>
+        </form>
+    </div>
+    <datalist id="product">
+        
+    </datalist>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

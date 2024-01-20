@@ -1,0 +1,33 @@
+{
+    "warnings": {
+        "main": {
+            "*": "Unrecognized parameter: ?redirect."
+        }
+    },
+    "batchcomplete": "",
+    "continue": {
+        "gsroffset": 1,
+        "continue": "gsroffset||"
+    },
+    "query": {
+        "pages": {
+            "1092923": {
+                "pageid": 1092923,
+                "ns": 0,
+                "title": "Google",
+                "index": 1,
+                "thumbnail": {
+                    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/400px-Googleplex_HQ_%28cropped%29.jpg",
+                    "width": 400,
+                    "height": 293
+                },
+                "pageimage": "Googleplex_HQ_(cropped).jpg",
+                "extract": "Google LLC ( (listen)) is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics. It has been referred to as \"the most powerful company in the world\" and one of the world's most valuable brands due to its market dominance, data collection, and technological advantages in the area of artificial intelligence. Its parent company Alphabet is considered one of the Big Five American information technology companies, alongside Amazon, Apple, Meta, and Microsoft.\nGoogle was founded on September 4, 1998, by Larry Page and Sergey Brin while they were PhD students at Stanford University in California. Together they own about 14% of its publicly listed shares and control 56% of its stockholder voting power through super-voting stock. The company went public via an initial public offering (IPO) in 2004. In 2015, Google was reorganized as a wholly owned subsidiary of Alphabet Inc."
+            }
+        }
+    },
+    "limits": {
+        "pageimages": 50,
+        "extracts": 20
+    }
+}

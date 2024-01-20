@@ -1,0 +1,36 @@
+{
+    "status": "OK",
+    "totalresult":"♾",
+    "api": [
+        {
+            "title":"Wikipedia AI",
+            "description":"We Are Developed A New Wikipedia Version And Its React Like An AI.",
+            "available":"Available - Web (Beta)",
+            "download":"./pages/disunicx.html",
+            "image":"./imgs/wikipediaai.png",
+            "SID":"1",
+            "display":"none",            
+            "trynow":"https://disunic20.github.io/Disunic-AI/"
+          },
+          {
+            "title":"Cartoon Holics",
+            "description":"We Are Try To Create A Cartoon Show Website, To Make Old Cartoons Still Alive. ",
+            "available":"Available - Web (Beta)",
+            "download":"./pages/noteeditor.html",
+            "image":"./imgs/cartoon.png",
+            "trynow":"https://disunic20.github.io/10Toons/",
+            "display":"none",       
+            "SID":"2"
+          },
+          {
+            "title":"DIOS",
+            "description":"A Shell Operating System From Disunic.",
+            "available":"Available - Windows, Linux",
+            "download":"https://github.com/Disunic20/Disunic-Os",
+            "image":"./imgs/dios.png",
+            "trynow":"https://github.com/Disunic20/Disunic-Os",
+            "SID":"3"
+          }
+          
+    ]
+  }
