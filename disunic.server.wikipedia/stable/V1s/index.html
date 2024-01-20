@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+    <script src='https://code.jquery.com/jquery-3.6.1.min.js'></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./screen.css">
+    <!-- <script src="https://disunic20.github.io/disunic.server.wikipedia/index.js"></script>
+    <link rel="stylesheet" href="https://disunic20.github.io/disunic.server.wikipedia/style.css"> -->
+</head>
+
+<body>
+    <div class="logo" title="logo">
+        <img src="./favicon.png" alt="">
+    </div>
+    <div class="wrap">
+        <div class="searchfunction" style="display: inline-flex;">
+            <div class="searchfunctioninpbtn" id="inp">
+                <input type="search" onkeyup="success()" autocomplete="off"
+                    placeholder="Type Here What Is In Your Mind..." id="query">
+                <button style="transition: 500ms;" id="search" disabled="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="srch-suggest" id="sugen"></div>
+    </div>
+    </div>
+    <div class="offline" id="offline">
+        <p>Please Check Your Internet Connection !</p>
+        <button onclick="window.location.reload()">Or Try To Refresh</button>
+    </div>
+    <div class="result" id="result"></div>
+    <div id="more"></div>
+    <div class="about" id="about"></div>
+    <div class="design" onclick="download()" style="display: none;">
+        <p>Trial ! Download For More.</p>
+    </div>
+    <div class="design2" onclick="download()">
+        <p style="display: none; color: #ffffff;
+        background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+        width: fit-content;
+        margin: auto;
+        margin-top: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 15px 10px 15px 10px;
+        font-weight: 600;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;">Download Now</p>
+    </div>
+    <script src="https://disunic20.github.io/Api.Disunic.io/js/disunic.js"></script>
+    <script src="./more.js"></script>
+</body>
+
+</html>
+<script>
+    function success() {
+        if (document.getElementById("query").value === "") {
+            document.getElementById('search').disabled = true;
+        } else {
+            document.getElementById('search').disabled = false;
+        }
+
+    }
+    if (navigator.onLine) {
+        document.getElementById("offline").style.display = "none";
+        document.getElementById("query").disabled = false;
+    } else {
+        document.getElementById("offline").style.display = "block";
+        document.getElementById("query").disabled = true;
+        window.location.reload()
+    }
+    function download() {
+        window.open("https://disunic20.github.io/pages/wikipedia.html")
+    }
+</script>
+<script>
+
+</script>
+
+<script>
+    var srchSugg = document.querySelector(".srch-suggest");
+    var srchInput = document.getElementById("query");
+    var articlesCon = document.getElementById("result");
+
+    srchInput.addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) {
+            wikiSearch(wikiApiUrl2 + srchInput.value.split(" ").join("+"));
+        } else if (srchInput.value) {
+            suggSearch(suggURL + srchInput.value.split(" ").join("+"));
+        } else {
+        }
+    });
+    var suggURL = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=suggCallback&list=prefixsearch&pslimit=8&pssearch=";
+    var wikiApiUrl2 = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=wikiCallback&prop=info%7Cextracts&generator=search&gsrlimit=10&inprop=url&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrsearch=";
+
+    function wikiSearch(url) {
+        var script = document.createElement("script");
+        script.src = url;
+        document.body.appendChild(script);
+        document.body.removeChild(script);
+    }
+    function suggSearch(url) {
+        var script = document.createElement("script");
+        script.src = url;
+        document.body.appendChild(script);
+        document.body.removeChild(script);
+    }
+    function suggCallback(data) {
+        srchSugg.innerHTML = '';
+        srchSugg.style.display = "block";
+        var titles = data.query.prefixsearch;
+
+        titles.forEach(function (title) {
+            var suggestion = document.createElement("h3");
+            suggestion.classList.add("srch-suggest_title");
+            suggestion.textContent = title.title;
+            suggestion.addEventListener("click", function () {
+                srchInput.value = this.textContent;
+                wikiSearch(wikiApiUrl2 + srchInput.value.split(" ").join("+"));
+            });
+            srchSugg.appendChild(suggestion);
+        });
+    }
+    function wikiCallback(data) {
+        articlesCon.innerHTML = "";
+        srchSugg.style.display = "none";
+        srchSugg.innerHTML = '';
+        var pages = data.query.pages;
+        for (var page in pages) {
+            var articleURL = pages[page].fullurl;
+            var articleTitle = pages[page].title;
+            var articleExtract = pages[page].extract;
+            // var articleImg = pages[page].img;
+
+            var article = '<div class="article"><a href="' + articleURL + '" target="">';
+            article += '<h2 class="rah">' + articleTitle + '</h2>';
+            article += '<p class="">' + articleExtract + '<p>';
+            article += '</a></div>';
+
+            articlesCon.insertAdjacentHTML("beforeend", article);
+            $('.logo').css('display', 'none');
+            $('.searchfunction').css('width', '90%');
+            $('.wrap').css('position', 'fixed');
+            $('.wrap').css('width', '100%');
+            $('.wrap').css('padding', '10px 0px 10px 0px');
+            $('.wrap').css('background', '#f2f4f7');
+            $('.wrap').css('animation', 'borderanii 8s infinite','borderaniii 100ms');
+            $('.searchfunction').css('border', 'none');
+            $('.searchfunction').css('box-shadow', 'none');
+            $('.searchfunction').css('margin-top', '0px');
+            $('.result').css('display', 'block');
+            $('.result').css('margin-top', '80px');
+            $('.closewiki').css('display', 'block');
+            $('.refresh').css('display', 'none');
+            $('.about').css('display', 'none');
+            $('.srch-suggest').css('width', '90%');
+            // $('.design').css('display', 'block');
+            $('.design2').css('display', 'none');
+        }
+    }
+</script>

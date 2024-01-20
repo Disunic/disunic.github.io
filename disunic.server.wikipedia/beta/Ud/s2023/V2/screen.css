@@ -1,0 +1,29 @@
+@media (min-width: 700px) {
+    .searchfunction{
+        width: 70%;
+    }
+    .srch-suggest{
+        width: 70%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .searchfunction{
+        width: 58%;
+    }
+    .srch-suggest{
+        width: 58%;
+    }
+    /* .result{
+        text-align: center;
+    }
+    .article{
+        background: rgb(255, 255, 255);
+        padding: 10px 10px 10px 6px;
+        width: 30%;
+        border-radius: 8px;
+        box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+        display: inline-flex;
+        margin: 20px;
+    } */
+}

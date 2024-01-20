@@ -1,0 +1,20 @@
+@media (min-width: 700px) {
+    .searchfunction{
+        width: 70%;
+    }
+    .srch-suggest{
+        width: 70%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .searchfunction{
+        width: 58%;
+    }
+    .srch-suggest{
+        width: 58%;
+    }
+    .article{
+        width: 90%;
+    }
+}

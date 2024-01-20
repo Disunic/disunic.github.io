@@ -1,0 +1,66 @@
+.dark{
+    background: #1f2533;
+    transition: 300ms;
+}
+.dark .bi-gear{
+    color: white;
+}
+.dark .bi-x-lg{
+    color: white;
+}
+.dark .searchfunction{
+    box-shadow: 0 1px 6px 0 rgb(255 255 255 / 57%);
+    background: rgb(10, 10, 13);
+}
+.dark .searchfunctioninpbtn button{
+    color: white;
+}
+.dark ::placeholder {
+    color: rgb(255, 255, 255);
+}
+.dark .searchfunction input{
+    color: white;
+}
+.dark .srch-suggest{
+    background: black;
+    color: white;
+}
+.dark .srch-suggest_title:hover{
+    background: #ffffff;
+    color: black;
+}
+.dark .about p{
+    color: white;
+}
+.dark .settings .containet .toggle-switch p{
+    color: rgb(255, 255, 255);
+}
+.dark .wrap{
+    background-color: #1f2533 !important;
+}
+.dark .result{
+    background-color: #1f2533 !important;
+}
+.dark .article {
+    background: black;
+}
+.dark .article p{
+    color: white;
+}
+.dark .article h2{
+    color: rgb(10, 181, 255);
+}
+.dark .article img{
+    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.866);
+}
+.dark .containet{
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 1px 100px white;
+}
+.dark .containet .rnum p{
+    color: white;
+}
+.dark .containet select{
+    background: black;
+    color: white;
+}
