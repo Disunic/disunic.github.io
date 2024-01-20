@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <link rel="stylesheet" href="./src/css/media.css" />
+    <!-- <script src="./src/javascript/voice.js"></script> -->
+    <title>New Tab</title>
+  </head>
+  <body>
+    <div class="logo"></div>
+    <div class="searchbar">
+      <div class="search" id="search">
+        <form action="https://google.com/search" method="get" id="search-form">
+          <input
+            type="search"
+            autocomplete="off"
+            onchange=""
+            name="q"
+            id="input"
+            autocorrect="on"
+            placeholder="Hey use me for Searching."
+          />
+          <button id="button" style="margin-right: 5px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              style="fill: url(#SvgjsLinearGradient1490)"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </button>
+          <button id="start" class="talk" type="button" onclick="hide()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              style="fill: url(#SvgjsLinearGradient1490)"
+              class="bi bi-mic"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"
+              />
+              <path
+                d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"
+              />
+            </svg>
+          </button>
+          <button id="end" class="talk" type="button" onclick="show()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              style="fill: url(#SvgjsLinearGradient1490)"
+              class="bi bi-mic-mute"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13 8c0 .564-.094 1.107-.266 1.613l-.814-.814A4.02 4.02 0 0 0 12 8V7a.5.5 0 0 1 1 0v1zm-5 4c.818 0 1.578-.245 2.212-.667l.718.719a4.973 4.973 0 0 1-2.43.923V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 1 0v1a4 4 0 0 0 4 4zm3-9v4.879l-1-1V3a2 2 0 0 0-3.997-.118l-.845-.845A3.001 3.001 0 0 1 11 3z"
+              />
+              <path
+                d="m9.486 10.607-.748-.748A2 2 0 0 1 6 8v-.878l-1-1V8a3 3 0 0 0 4.486 2.607zm-7.84-9.253 12 12 .708-.708-12-12-.708.708z"
+              />
+            </svg>
+          </button>
+          <button type="button" onclick="tools()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              style="fill: url(#SvgjsLinearGradient1490)"
+              class="bi bi-columns-gap"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="tools" id="tools">
+        <div class="google">
+          <h2>From Google</h2>
+          <div class="p">
+            <a href="https://www.youtube.com/?gl=IN&tab=r1">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1200px-YouTube_full-color_icon_%282017%29.svg.png"
+                alt=""
+              />
+            </a>
+            <a href="https://mail.google.com/mail/">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/200px-Gmail_icon_%282020%29.svg.png"
+                alt=""
+                style="width: 55px"
+              />
+            </a>
+            <a href="https://maps.google.co.in/maps?hl=en&tab=rl">
+              <img
+                src="https://cdn.vox-cdn.com/thumbor/pOMbzDvdEWS8NIeUuhxp23wi_cU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19700731/googlemaps.png"
+                alt=""
+                style="width: 55px; margin-top: -8px; margin-left: -5px"
+              />
+            </a>
+            <a href="https://meet.google.com/?hs=197&pli=1&authuser=0">
+              <img
+                src="https://play-lh.googleusercontent.com/GBYSf20osBl2CRHbjGOyaOG5kQ3G4xbRau-dzScU9ozuXQJtnUZPkR3IqEDOo5OiVgU"
+                alt=""
+                style="width: 55px; margin-top: -8px; margin-left: -8px"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="transcript" style="display: none"></div>
+      <div class="ceo" id="ceo"></div>
+      <div class="joke">
+        <p style="display: none" id="joke"></p>
+      </div>
+    </div>
+    <svg>
+      <defs id="SvgjsDefs1485">
+        <linearGradient id="SvgjsLinearGradient1490">
+          <stop id="SvgjsStop1491" stop-color="#00ddff" offset="0"></stop>
+          <stop id="SvgjsStop1492" stop-color="#ff00d4" offset="5"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+    <script src="./src/javascript/about.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>
+<script>
+  window.SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
+  const transcript_element = document.getElementById("transcript");
+  let jokeContainer = document.getElementById("joke");
+
+  const url =
+    // "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+    "https://icanhazdadjoke.com/graphql?query=query{joke{joke}}";
+
+  const getJoke = () => {
+    // jokeContainer.classList.remove("fade");
+    fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        const { data } = item;
+        document.getElementById("joke").style.display = "block";
+        jokeContainer.textContent = `${data.joke.joke}`;
+        let text = jokeContainer.textContent;
+        setTimeout(function () {
+          if (text == jokeContainer.textContent) {
+            const spel = new SpeechSynthesisUtterance(text);
+            spel.rate = 1;
+            console.log(text);
+            window.speechSynthesis.speak(spel);
+          }
+        }, 1000);
+        // jokeContainer.classList.add("fade");
+      });
+  };
+  const talk_button = document.getElementById("start");
+  const end_button = document.getElementById("end");
+  let Qt = document.getElementById("transcript");
+  recognition.addEventListener("result", (e) => {
+    const transcript = Array.from(e.results)
+      .map((result) => result[0])
+      .map((result) => result.transcript)
+      .join("");
+    Qt.textContent = transcript;
+    console.log(transcript);
+    let val = (document.querySelector("input").value = transcript);
+
+    if (e.results[0].isFinal) {
+      if (val == "open YouTube") {
+        let text = "Opening YouTube";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        setTimeout(function () {
+          window.open(
+            "https://www.youtube.com/",
+            "_self",
+            window.location.reload()
+          );
+        }, 500);
+        bn.disabled = true;
+      } else if (val == "open Keep notes") {
+        let text = "Opening Keep Notes";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        setTimeout(function () {
+          window.open(
+            "https://keep.google.com/u/0/",
+            "_self",
+            window.location.reload()
+          );
+        }, 500);
+        bn.disabled = true;
+      } else if (val == "open Google Map") {
+        let text = "Opening Google Map";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        setTimeout(function () {
+          window.open(
+            "https://www.google.co.in/maps/",
+            "_self",
+            window.location.reload()
+          );
+        }, 500);
+        bn.disabled = true;
+      } else if (val == "open Gmail") {
+        let text = "Opening Gmail From Google";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        setTimeout(function () {
+          window.open(
+            "https://mail.google.com/",
+            "_self",
+            window.location.reload()
+          );
+        }, 500);
+        bn.disabled = true;
+      } else if (val == "open spotify") {
+        let text = "Opening Spotify";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        setTimeout(function () {
+          window.open(
+            "https://open.spotify.com/browse/featured",
+            "_self",
+            window.location.reload()
+          );
+        }, 500);
+        bn.disabled = true;
+      } else if (val == " spotify") {
+        let text = "Opening Spotify";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        setTimeout(function () {
+          window.open(
+            "https://open.spotify.com/browse/featured",
+            "_self",
+            window.location.reload()
+          );
+        }, 500);
+        bn.disabled = true;
+      } else if (val == "Google") {
+        let text =
+          "   Ooooo ! google is my competitor. But Google Is Better then me. ";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+      } else if (val == "barrel roll") {
+        barrelroll();
+        setTimeout(function () {
+          window.location.reload();
+        }, 1000);
+        bn.disabled = true;
+        // } else if (val == "hello") {
+        //   let text = "Hi . I am Disunic X . How Can I Help You Sir ?";
+        //   const spel = new SpeechSynthesisUtterance(text);
+        //   window.speechSynthesis.speak(spel);
+        //   bn.disabled = true;
+      } else if (val == "Souvik Nandi") {
+        let text = "Souvik Nandi is The Ceo Of Disunic Corporation.";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        bn.disabled = true;
+      } else if (val == "niladri Biswas") {
+        let text =
+          "Niladri Biswas is The Network Holder Of Disunic Corporation.";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+        bn.disabled = true;
+      }
+    }
+
+    if (e.results[0].isFinal) {
+      if (val == "joke") {
+        getJoke();
+      } else if (val == "tell me a joke") {
+        getJoke();
+      } else if (val == "hello") {
+        let text = "Hi . I am Disunic X . How Can I Help You Sir ?";
+        const spel = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(spel);
+      } else if (val == "test") {
+        let text = "আপনি কেমন আছেন?";
+        const spel = new SpeechSynthesisUtterance(text);
+        spel.lang = "beng"
+        window.speechSynthesis.speak(spel);
+      }
+      else {
+        let bn = setTimeout(function () {
+          window.open(
+            "https://google.com/search?q=" + transcript,
+            "_self",
+            window.location.reload()
+          );
+        }, 2000);
+
+        let textt = "Opening " + transcript + "On Search Result";
+        const spell = new SpeechSynthesisUtterance(textt);
+        window.speechSynthesis.speak(spell);
+      }
+    }
+  });
+
+  recognition.addEventListener("end", () => {
+    end_button.disabled = true;
+    talk_button.disabled = false;
+  });
+  talk_button.addEventListener("click", () => {
+    end_button.disabled = false;
+    talk_button.disabled = true;
+    recognition.start();
+    setTimeout(function () {
+      show();
+      end_button.disabled = true;
+      talk_button.disabled = false;
+      recognition.stop();
+      recognition.addEventListener("end", () => recognition.stop());
+      console.log("enf");
+    }, 8000);
+  });
+
+  end_button.addEventListener("click", () => {
+    end_button.disabled = true;
+    recognition.addEventListener("end", () => recognition.stop());
+    talk_button.disabled = false;
+    recognition.stop();
+    recognition.addEventListener("end", () => recognition.stop());
+  });
+</script>
+<script>
+  document.getElementById("end").style.display = "none";
+  function show() {
+    document.getElementById("end").style.display = "none";
+    document.getElementById("start").style.display = "";
+  }
+  function hide() {
+    document.getElementById("end").style.display = "";
+    document.getElementById("start").style.display = "none";
+  }
+</script>
+<script>
+  function barrelroll() {
+    document.body.style.animation = "barrel 1s";
+  }
+</script>

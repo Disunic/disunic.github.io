@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disunic App</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/main2.css" />
+    <link rel="stylesheet" href="./styles/disunicx.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+    <link rel="stylesheet" href="./styles/blogs.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/cloud.css" />
+    <link rel="stylesheet" href="./styles/news.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/versions.css" />
+    <script src=https://code.jquery.com/jquery-1.11.3.min.js></script>
+  </head>
+
+  <body onload="olp()">
+    <header id="header">
+      <div>
+        <p id="honb1" aria-selected="false" onclick="b1()">Home</p>
+        <p id="honb2" aria-selected="false" onclick="b2()">Projects</p>
+        <p id="honb3" aria-selected="false" onclick="b3()">Blogs</p>
+        <p id="honb4" aria-selected="false" onclick="b4()">DisunicX</p>
+        <p id="honb5" aria-selected="false" onclick="b5()">Cloud</p>
+        <p id="honb6" aria-selected="false" onclick="b6()">News</p>
+        <p id="honb7" aria-selected="false" onclick="b7()">About</p>
+        <p id="honb8" aria-selected="false" onclick="b8()">Update_Versions</p>
+      </div>
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="40"
+          fill="url(#SvgjsLinearGradient1490)"
+          class="bi bi-grid-1x2"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 1H1v14h5V1zm9 0h-5v5h5V1zm0 9v5h-5v-5h5zM0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm1 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1h-5z"
+          />
+        </svg>
+      </button>
+    </header>
+    <div id="homepage"></div>
+    <div id="projects" style="text-align: center;display: none;"></div>
+    <div id="blogs" style="text-align: center;display: none;"></div>
+    <div id="disunicx" style="text-align: center;display: none;"></div>
+    <div id="cloud" style="text-align: center;display: none;"></div>
+    <div id="news" style="text-align: center;display: none;"></div>
+    <div id="about" style="text-align: center;display: none;"></div>
+    <div id="versions" style="text-align: center;display: none;"></div>
+
+    <script src="./database/scripts/homepage.js"></script>
+    <script src="./database/scripts/projects.js"></script>
+    <script src="./database/scripts/blogs.js"></script>
+    <script src="./database/scripts/disunicx.js"></script>
+    <script src="./database/scripts/cloud.js"></script>
+    <script src="./database/scripts/news.js"></script>
+    <script src="./database/scripts/about.js"></script>
+    <script src="./database/scripts/versions.js"></script>
+    <script src="./scripts/ui.js"></script>
+    <script
+      async
+      src="https://cse.google.com/cse.js?cx=1e55c315a07763f52"
+    ></script>
+    <script>
+      
+    </script>
+  </body>
+  <svg>
+    <defs id="SvgjsDefs1485">
+      <linearGradient id="SvgjsLinearGradient1490">
+        <stop id="SvgjsStop1491" stop-color="#00ddff" offset="0"></stop>
+        <stop id="SvgjsStop1492" stop-color="#ff00d4" offset="5"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+</html>
+
+<script>
+  var index = 0;
+  var slides = document.querySelectorAll(".slides");
+  var dot = document.querySelectorAll(".dot");
+
+  function changeSlide() {
+    if (index < 0) {
+      index = slides.length - 1;
+    }
+
+    if (index > slides.length - 1) {
+      index = 0;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      dot[i].classList.remove("active");
+    }
+
+    slides[index].style.display = "block";
+    dot[index].classList.add("active");
+
+    index++;
+
+    setTimeout(changeSlide, 9000);
+  }
+
+  changeSlide();
+</script>
+<script>
+  // window.history.back() = function () {
+  //   scrollFunction();
+  // };
+  // function scrollFunction(){
+  //   window.location.reload()
+  // }
+
+  // function scrollFunction() {
+  //   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+  //     document.getElementById("header").style.boxShadow =
+  //       "#b9b9b9 0px 10px 10px 1px";
+  //   } else {
+  //     document.getElementById("header").style.boxShadow = "0 0 0 0 white";
+  //   }
+  // }
+</script>
+<script>
+ 
+  // const para = document.getElementById("gsc-tabsArea2")
+  
+  function olp(){
+    $('.gsc-positioningWrapper').attr('id','gsc-tabsArea')
+    $('.gsc-tabsArea').attr('id','gsc-tabsArea7')
+    // $('.gsc-search-button-v2').attr('onclick','acc(),searchfunction()')
+    $('.gsc-search-button-v2').attr('id','gscsearchbutton')
+    $('.gsc-search-button-v2').attr('disabled',true)
+    $('.gsc-results-close-btn').attr('onclick','clssearchfunction()')
+    $('.gsc-control-wrapper-cse').attr('id','check1')
+    $('.gsc-above-wrapper-area-container').attr('id','ssssssssss')
+    $('.gsc-input').attr('placeholder','Hey use me for Searching.')
+    $('.gsc-input').attr('onkeyup','success()')
+    $('.gsst_a').attr('onclick','clssearchfunction()')
+    // gsst_a  
+
+  }
+
+  // function searchfunction(){
+  //   $('.gsc-search-box').attr('id','gsc-tabsArea2')
+  //   const Engine = document.getElementById("gsc-tabsArea")
+  //   const para = document.getElementById("gsc-tabsArea2")
+  //   Engine.appendChild(para)
+    
+  // }
+  // function acc(){
+  //   document.getElementById("ssssssssss").style.marginTop="40px";
+  // }
+  function clssearchfunction(){
+    $('.gsc-search-box').attr('id','gsc-tabsArea2')
+    const Engine = document.getElementById("gsc-tabsArea")
+    const para1 = document.getElementById("check1")
+    const para = document.getElementById("gsc-tabsArea2")
+    // Engine.remove(para)
+    para1.appendChild(para)
+    $('.gsc-search-button-v2').attr('disabled',true)
+    history.back();
+    // document.getElementById("gs_cb50").style.display = "block"
+    
+  }
+  function success() {
+    let inputElt = document.getElementById('gsc-i-id1');
+    let btn = document.getElementById('gscsearchbutton');
+	 
+  //   inputElt.addEventListener("input", function(){
+  // btn.disabled = (this.value === '');
+    if (inputElt.value===""){
+      btn.disabled = true;
+    }
+    else{
+      btn.disabled = false
+    }
+    
+  // })
+      }
+
+</script>
+<script>
+</script>

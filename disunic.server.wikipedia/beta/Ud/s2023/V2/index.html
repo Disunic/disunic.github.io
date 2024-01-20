@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+    <script src='https://code.jquery.com/jquery-3.6.1.min.js'></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./screen.css">
+    <link rel="stylesheet" href="./theme.css">
+    <script src="./search.js"></script>
+</head>
+
+<body onload="settings()">
+    <div class="settings">
+        <button class="settings-btn" id="settings-btn" onclick="settings()" style="
+        background:transparent;
+        border: none;
+        position: absolute;
+        right: 0px;
+        margin: 20px 15px 0px 0px ;
+        cursor: pointer;
+        ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                <path
+                    d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+            </svg>
+        </button>
+        <button onclick="settingscls()" id="settings-btncls" style="
+        display: none;
+        background:transparent;
+        border: none;
+        position: absolute;
+        right: 0px;
+        margin: 20px 15px 0px 0px ;
+        cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </button>
+        <div class="containet" id="containet">
+            <div class="toggle-switch">
+                <p>Dark</p><span><label class="switch"><input id="theme-switch" type="checkbox"><span
+                            class="slider round"></span></label></span>
+                <p>Light</p>
+            </div>
+            <div class="rnum">
+                <p>Search Result Number</p>
+                <select name="" id="rnum">
+                    <option value="10">Default(10)</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+            <div class="version">
+                <p>Api Version 20.21.38</p>
+            </div>
+        </div>
+    </div>
+    <form id="message-form">
+        <div class="logo" title="logo" id="logo">
+            <img src="./favicon.png" alt="">
+        </div>
+        <div class="wrap">
+            <div class="searchfunction" id="searchfunction" style="display: inline-flex;" onclick="fffres()">
+                <div class="searchfunctioninpbtn" id="inp">
+                    <input type="search" onkeyup="success()" autocomplete="off"
+                        placeholder="Type Here What Is In Your Mind..." id="query">
+                    <button style="transition: 500ms;" id="search" disabled="true" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+            <p id="asd" class="asd"
+                style="display:none;width: 90%;margin:auto;text-align: left; margin-top: 5px;font-weight: 600;padding: 0px 0px 0px 20px;">
+                Also Search With</p>
+            <div class="other" id="other" style="display: none;">
+                <button onclick="google()">Google</button>
+                <button onclick="bing()">Bing</button>
+                <button onclick="duck()">DuckDuckGo</button>
+                <button onclick="brave()">Brave</button>
+                <button onclick="disunicx()">DisunicX</button>
+                <!-- <button>Brave</button> -->
+            </div>
+            <div class="srch-suggest" id="sugen"></div>
+        </div>
+        </div>
+        <div class="offline" id="offline">
+            <p>Please Check Your Internet Connection !</p>
+            <button onclick="window.location.reload()">Or Try To Refresh</button>
+        </div>
+        <div class="result" id="result"></div>
+        <div id="more"></div>
+        <div class="about" id="about"></div>
+        <div class="design" onclick="download()" style="display: none;">
+            <p>Trial ! Download For More.</p>
+        </div>
+        <div class="design2" onclick="download()">
+            <p style="display: none; color: #ffffff;
+        background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+        width: fit-content;
+        margin: auto;
+        margin-top: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 15px 10px 15px 10px;
+        font-weight: 600;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;">Download Now</p>
+        </div>
+    </form>
+    <script src="https://disunic20.github.io/Api.Disunic.io/js/disunic.js"></script>
+    <script src="./theme.js"></script>
+    <script src="./more.js"></script>
+</body>
+
+</html>
+<script>
+    function success() {
+        if (document.getElementById("query").value === "") {
+            document.getElementById('search').disabled = true;
+        } else {
+            document.getElementById('search').disabled = false;
+        }
+
+    }
+    if (navigator.onLine) {
+        document.getElementById("offline").style.display = "none";
+        document.getElementById("query").disabled = false;
+    } else {
+        document.getElementById("offline").style.display = "block";
+        document.getElementById("query").disabled = true;
+        window.location.reload()
+    }
+    function download() {
+        window.open("https://disunic20.github.io/pages/wikipedia.html")
+    }
+    function settings() {
+        document.getElementById("containet").style.display = "block";
+        document.getElementById("settings-btn").style.transition = "2s";
+        document.getElementById("settings-btn").style.transform = "rotate(360deg)";
+        document.getElementById("settings-btn").style.display = "none";
+        document.getElementById("settings-btncls").style.transition = "2s";
+        document.getElementById("settings-btncls").style.transform = "rotate(-360deg)";
+        document.getElementById("settings-btncls").style.display = "block";
+    }
+    function settingscls() {
+        document.getElementById("containet").style.display = "none";
+        document.getElementById("settings-btn").style.transition = "2s";
+        document.getElementById("settings-btn").style.transform = "rotate(-360deg)";
+        document.getElementById("settings-btn").style.display = "block";
+        document.getElementById("settings-btncls").style.transition = "2s";
+        document.getElementById("settings-btncls").style.transform = "rotate(360deg)";
+        document.getElementById("settings-btncls").style.display = "none";
+    }
+    function fffres() {
+        document.getElementById("logo").style.display = "none";
+        document.getElementById("about").style.display = "none";
+        document.getElementById("searchfunction").style.width = "100%";
+        document.getElementById("searchfunction").style.marginTop = "0px";
+        document.getElementById("sugen").style.width = "100%";
+        document.getElementById("settings-btn").style.display = "none";
+        // document.getElementById("").style.display="";
+        // document.getElementById("").style.display="";
+        // document.getElementById("").style.display="";
+        // document.getElementById("").style.display="";
+        // document.getElementById("").style.display="";
+        // document.getElementById("").style.display="";
+
+    }
+    function google() {
+        var query = document.getElementById("query").value;
+        setTimeout(() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            window.open("https://www.google.com/search?q=" + query)
+        }, 1);
+    }
+    function bing() {
+        var query = document.getElementById("query").value;
+        setTimeout(() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            window.open("https://www.bing.com/search?q=" + query)
+        }, 1);
+    }
+    function duck() {
+        var query = document.getElementById("query").value;
+        setTimeout(() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            window.open("https://duckduckgo.com/?q=" + query)
+        }, 1);
+    }
+    function brave() {
+        var query = document.getElementById("query").value;
+        setTimeout(() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            window.open("https://search.brave.com/search?q=" + query)
+        }, 1);
+    }
+    function disunicx() {
+        var query = document.getElementById("query").value;
+        setTimeout(() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            window.open("https://disunic20.github.io/Bin/DisunicX/search.html#gsc.tab=0&gsc.q=" + query)
+        }, 1);
+    }
+
+</script>
+<script>
+
+</script>
+
+<script>
+    var srchSugg = document.querySelector(".srch-suggest");
+    var srchInput = document.getElementById("query");
+    var articlesCon = document.getElementById("result");
+    var resultnumber = document.getElementById("rnum").value
+
+    srchInput.addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) {
+            wikiSearch(wikiApiUrl2 + srchInput.value.split(" ").join("+"));
+        } else if (srchInput.value) {
+            suggSearch(suggURL + srchInput.value.split(" ").join("+"));
+        } else {
+        }
+    });
+    var suggURL = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=suggCallback&list=prefixsearch&pslimit=10&pssearch=";
+    var wikiApiUrl2 = "https://en.wikipedia.org/w/api.php?action=query&format=json&callback=wikiCallback&prop=info%7Cextracts&generator=search&gsrlimit=" + resultnumber + "&inprop=url&exsentences=1&exlimit=max&exintro=1&explaintext=1&gsrsearch=";
+
+    function wikiSearch(url) {
+        var script = document.createElement("script");
+        script.src = url;
+        document.body.appendChild(script);
+        document.body.removeChild(script);
+    }
+    function suggSearch(url) {
+        var script = document.createElement("script");
+        script.src = url;
+        document.body.appendChild(script);
+        document.body.removeChild(script);
+    }
+    function suggCallback(data) {
+        srchSugg.innerHTML = '';
+        srchSugg.style.display = "block";
+        var titles = data.query.prefixsearch;
+
+        titles.forEach(function (title) {
+            var suggestion = document.createElement("h3");
+            suggestion.classList.add("srch-suggest_title");
+            suggestion.setAttribute("id", "search-t")
+            $('#search-t').click(function () {
+
+            });
+            suggestion.textContent = title.title;
+            suggestion.addEventListener("click", function () {
+                srchInput.value = this.textContent;
+                wikiSearch(wikiApiUrl2 + srchInput.value.split(" ").join("+"));
+            });
+            srchSugg.appendChild(suggestion);
+        });
+    }
+    function wikiCallback(data) {
+        $('#search').click();
+        articlesCon.innerHTML = "";
+        srchSugg.style.display = "none";
+        srchSugg.innerHTML = '';
+        var pages = data.query.pages;
+        for (var page in pages) {
+            var articleURL = pages[page].fullurl;
+            var articleTitle = pages[page].title;
+            var articleExtract = pages[page].extract;
+            // var articleImg = pages[page].img;
+
+            var article = '<div class="article"><a href="' + articleURL + '" target="">';
+            article += '<h2 class="rah">' + articleTitle + '</h2>';
+            article += '<p class="">' + articleExtract + '<p>';
+            article += '</a></div>';
+
+            articlesCon.insertAdjacentHTML("beforeend", article);
+            $('.logo').css('display', 'none');
+            $('.searchfunction').css('width', '90%');
+            $('.wrap').css('position', 'fixed');
+            $('.wrap').css('width', '100%');
+            $('.wrap').css('padding', '10px 0px 10px 0px');
+            $('.wrap').css('background', '#f2f4f7');
+            $('.wrap').css('animation', 'borderanii 8s infinite', 'borderaniii 100ms');
+            $('.searchfunction').css('border', 'none');
+            $('.searchfunction').css('box-shadow', 'none');
+            $('.searchfunction').css('margin-top', '0px');
+            $('.result').css('display', 'block');
+            $('.result').css('margin-top', '160px');
+            $('.closewiki').css('display', 'block');
+            $('.refresh').css('display', 'none');
+            $('.about').css('display', 'none');
+            $('.srch-suggest').css('width', '90%');
+            $('.asd').css('display', 'block');
+            $('.design2').css('display', 'none');
+            $('.other').css('display', 'inline-flex');
+            document.documentElement.scrollTop = 0;
+        }
+    }
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="firebase-server.js"></script>
