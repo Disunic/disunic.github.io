@@ -7,10 +7,10 @@
         "name": "Disunic Corporation"
       },
       "url": "https://disunic20.github.io",
-      "urli": "https://disunicchat-default-rtdb.asia-southeast1.firebasedatabase.app",
       "year":"2024",
       "Author": "Souvik Nandi",
-      "api-v":"4.80.90.87 Static"
+      "api-v":"4.80.90.87 Static",
+      "server":"stable"
     }
   ]
 }
